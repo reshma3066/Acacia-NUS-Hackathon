@@ -27,7 +27,7 @@ from .contracts import Patch, Result, Scenario, Validation
 log = logging.getLogger("saf.agent")
 
 SCHEMA_VERSION = "1.0"
-PROMPT_VERSION = "agent-prompt-v1"
+PROMPT_VERSION = "agent-prompt-v1.2"
 AIRPORT_IDS = ("PNK", "PKN", "BPN", "TRK")
 AIRPORT_NAMES = {
     "PNK": "Supadio Intl (Pontianak)",
@@ -110,6 +110,9 @@ def _create(**kwargs):
         except Exception as e:  # anthropic.APIError, timeouts, connection errors
             last_err = e
             log.warning("Claude API call failed: %s", type(e).__name__)
+            code = getattr(e, "status_code", None)
+            if isinstance(code, int) and 400 <= code < 500 and code not in (408, 409, 429):
+                break  # bad key / bad request / no credit: retrying cannot help
             if budget.retries_left <= 0:
                 break
             budget.retries_left -= 1
@@ -143,6 +146,9 @@ PATCH_TOOL = {
                                  "description": "'set' = new absolute demand in t/year; "
                                                 "'percent_change' = relative change, e.g. 20 for +20%, -10 for -10%"},
                         "value": {"type": "number"},
+                        "unit": {"type": "string", "enum": ["t", "kt"],
+                                 "description": "Unit of an absolute 'set' value as the planner wrote it: "
+                                                "'kt' for kilotonnes, 't' for tonnes. Do not convert yourself."},
                     },
                     "required": ["airport_id", "mode", "value"],
                 },
@@ -159,7 +165,7 @@ PARSE_SYSTEM = (
     "Only SAF demand (tonnes/year) at these four airports can be changed: "
     + "; ".join(f"{k} = {v}" for k, v in AIRPORT_NAMES.items())
     + ". Do NOT calculate new values yourself: report percentages as mode 'percent_change' and "
-    "absolute targets as mode 'set'. Never guess an airport or amount; ask instead. "
+    "absolute targets as mode 'set' with the unit the planner used (t or kt). Demand is shown in t/year. Never guess an airport or amount; ask instead. "
     "Always answer by calling submit_demand_patch exactly once."
 )
 
@@ -207,9 +213,11 @@ def tool_input_to_patch(data: dict | None, scenario: Scenario) -> Patch:
     demand = scenario.get("demand_t_per_year", {})
     out, seen = [], set()
     for ch in changes:
-        if not isinstance(ch, dict) or set(ch) - {"airport_id", "mode", "value"}:
+        if not isinstance(ch, dict) or set(ch) - {"airport_id", "mode", "value", "unit"}:
             return _clarify("I couldn't interpret one of the changes. Please restate it.")
-        aid, mode, value = ch.get("airport_id"), ch.get("mode"), ch.get("value")
+        aid, mode, value, unit = ch.get("airport_id"), ch.get("mode"), ch.get("value"), ch.get("unit", "t")
+        if unit not in ("t", "kt"):
+            return _clarify(f"Is the {aid} amount in tonnes or kilotonnes per year?")
         if aid not in AIRPORT_IDS or aid not in demand:
             return _clarify(f"'{aid}' isn't one of the four airports (PNK, PKN, BPN, TRK). Which did you mean?")
         if aid in seen:
@@ -218,7 +226,7 @@ def tool_input_to_patch(data: dict | None, scenario: Scenario) -> Patch:
         if not (isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)):
             return _clarify(f"What amount should {aid} change by?")
         if mode == "set":
-            new = float(value)
+            new = float(value) * (1000.0 if unit == "kt" else 1.0)
         elif mode == "percent_change":
             new = float(demand[aid]) * (1.0 + float(value) / 100.0)
         else:
@@ -239,7 +247,7 @@ def parse_request(text: str, scenario: Scenario) -> Patch:
         max_tokens=PARSE_MAX_TOKENS,
         system=PARSE_SYSTEM,
         tools=[PATCH_TOOL],
-        tool_choice={"type": "tool", "name": PATCH_TOOL["name"]},
+        tool_choice={"type": "auto"},  # forced tool_choice is not supported by this Opus model
         messages=[{"role": "user", "content":
                    f"Current SAF demand (t/year): {json.dumps(current)}\n\nPlanner request: {text.strip()[:1000]}"}],
     )
@@ -254,6 +262,10 @@ def parse_request(text: str, scenario: Scenario) -> Patch:
 VALID_STATUSES = ("optimal", "feasible")
 
 
+def _kt(d):
+    return {k: round(v / 1000.0, 1) for k, v in (d or {}).items() if isinstance(v, (int, float))}
+
+
 def result_facts(scenario: Scenario, result: Result, validation: Validation) -> dict:
     """Compact, JSON-safe facts. This is ALL Claude sees - never flows or raw data."""
     fac = result.get("facilities") or []
@@ -265,12 +277,16 @@ def result_facts(scenario: Scenario, result: Result, validation: Validation) -> 
         "scenario_id": scenario.get("scenario_id"),
         "assumptions_status": scenario.get("assumptions_status"),
         "demand_t_per_year": scenario.get("demand_t_per_year"),
+        "demand_kt_per_year": _kt(scenario.get("demand_t_per_year")),
         "status": result.get("status"),
         "provenance": result.get("provenance"),
         "mip_gap": result.get("mip_gap"),
         "facility_counts": count,
         "deliveries_t_per_year": result.get("deliveries_t_per_year"),
+        "deliveries_kt_per_year": _kt(result.get("deliveries_t_per_year")),
         "costs": result.get("costs"),
+        "costs_usd_millions": {k: round(v / 1e6, 1) for k, v in (result.get("costs") or {}).items()
+                               if isinstance(v, (int, float))},
         "validation_valid": validation.get("valid") if validation else None,
         "checks_passed": [c.get("name") for c in (validation or {}).get("checks", []) if c.get("passed")],
         "validation_errors": (validation or {}).get("errors", []),
@@ -308,7 +324,8 @@ def template_explanation(scenario: Scenario, result: Result | None, validation: 
 
 EXPLAIN_SYSTEM = (
     "You explain an already-solved and validated SAF supply-chain plan to a planner in 3-5 short sentences. "
-    "Use ONLY numbers that appear in the JSON facts, copied exactly (you may add $ and thousands separators). "
+    "Use ONLY numbers that appear in the JSON facts, copied exactly (you may add $, thousands separators, "
+    "'kt' or 'million' when using the *_kt_* or *_usd_millions fields). "
     "Do not compute new numbers, percentages or differences. Do not claim anything about feasibility beyond "
     "the 'status' and 'validation_valid' fields. If assumptions_status starts with DEMO, say assumptions are "
     "not organiser-confirmed."
