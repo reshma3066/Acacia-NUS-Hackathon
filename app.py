@@ -107,7 +107,7 @@ def render_dashboard(response: dict, baseline: Result | None) -> None:
     if response.get('clarification'):st.warning(response['clarification'])
     if r is None:
         st.info('No plan was solved for this request; the scenario is unchanged.')
-        if response.get('explanation'):st.caption(response['explanation'])
+        if response.get('explanation'):st.caption(response['explanation'].replace('$','\\$'))
         return
 
     usable=is_usable(r,v)
@@ -131,7 +131,7 @@ def render_dashboard(response: dict, baseline: Result | None) -> None:
         st.error('Costs do not reconcile, so no cost figures are shown: '+'; '.join(problems))
         return
 
-    if response.get('explanation'):st.success(response['explanation'])
+    if response.get('explanation'):st.success(response['explanation'].replace('$','\\$'))
     base,base_reason=matching_baseline(scenario['scenario_id'],baseline)
     total=r['costs']['total_usd_per_year']
     m=st.columns(3)
