@@ -1,0 +1,11 @@
+{
+  "schema_version": "2.0",
+  "status": "ready",
+  "changes": [
+    {
+      "airport_id": "BPN",
+      "new_demand_t_per_year": 30
+    }
+  ],
+  "question": null
+}
