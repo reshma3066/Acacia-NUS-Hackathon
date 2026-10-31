@@ -1,0 +1,304 @@
+Shared contract / ownership
+Contract changes need Shaza plus the affected owner. Work independently against mocks; never wait for another
+laptop to finish. All consumers accept JSON-compatible dict/list/scalar values. No NaN, Infinity, DataFrames or
+numpy scalars cross interfaces.
+Acacia-NUS-Hackathon/
+  app.py                        # Sarah
+  saf/
+    contracts.py data.py validation.py  # Shaza
+    optimizer.py baseline.py           # Reshma
+    agent.py service.py                # Syakir
+  config/                       # Shaza
+    assumptions.json assumptions_full.json
+    assumptions_full_bpn20.json assumptions_full_infeasible.json
+    facilities.json
+  data/raw/  data/processed/     # Shaza
+  mocks/                        # Shaza; every owner consumes
+  tests/test_contract_fixtures.py # Shaza; owners contribute checks
+  scripts/prepare_data.py        # Shaza
+  scripts/check_full_scenarios.py # Reshma
+  scripts/render_network.py      # Sarah
+  docs/evaluation.md run_results.json # Reshma
+  docs/                         # supporting shared documentation
+  README.md requirements.txt .env.example .gitignore # Shaza
+Shaza bootstraps main once. Sarah owns merging/integration from 13:30, demo script and backup recording.
+Syakir takes integration only after an explicit handoff if Sarah is blocked. Nobody edits another owner’s
+implementation without agreement.
+Commit raw organiser files in the bootstrap commit. Old airports.dat is retained for traceability only;
+challenge3_airports_4.csv is authoritative. No public external dataset is used. If adding one, include citation,
+licence note and a fetch script.
+
+
+Shared contract / inputs
+File / key
+Exact columns or keys, units
+Example
+sources.csv
+source_id, province, district, latitude, longitude,
+supply_t_per_year
+KAL_SUP_01, West Kalimantan, Ketapang,
+-1.9635, 110.1136, 90120
+airports.csv
+airport_id, name, latitude, longitude
+PNK, Supadio Intl (Pontianak), -0.150711,
+109.403999
+candidates.csv
+candidate_id, kind, latitude, longitude; kind depot|refinery
+D_KAL_SUP_01, depot, -1.9635, 110.1136
+distances.csv
+from_id, to_id, stage, distance_km
+R1, TRK, refinery_airport, 100 (fixture)
+Bundle
+sources:list; airports:list; candidates:list; distances:list;
+facility_options:dict
+mocks/bundle.json contains a complete
+usable example.
+Stages
+source_depot; depot_refinery; refinery_airport
+All flow units tonnes/year. Geographic
+coordinates decimal degrees WGS84.
+facility_options
+kind -> size -> capex_usd, capacity_t_per_year,
+fixed_opex_usd_per_year, variable_opex_usd_per_tonne_in
+depot.small: 2250000, 150000, 112500, 5
+Scenario fields
+schema_version:str; scenario_id:str; assumptions_status:str; period_years:number;
+demand_t_per_year:dict[airport_id,number]; depot_yield:number; refinery_yield:number; use_all_supply:bool;
+distance_method:str; distance_multiplier:number; annualisation_years:number; discount_rate:number;
+transport_usd_per_t_km:dict[stage,number]; solver_time_limit_s:number; solver_rel_gap:number.
+Example: full-base-v2.0 has demand {PNK:300000, PKN:300000, BPN:300000, TRK:300000}, period_years=1,
+yields=1/.2, use_all_supply=false, distance_method=haversine, multiplier=1.3, annualisation=20, discount=0,
+transport rates .10/.12/.08, time limit=30 s, gap target=.01. Full JSON: config/assumptions_full.json.
+
+
+Shared contract / function signatures
+Aliases Bundle, Scenario, Result, Validation and Patch represent JSON dictionaries from saf/contracts.py. Inputs
+are read-only; apply_patch creates a deep copy. All signatures below are unchanged.
+load_bundle(data_dir: str, config_path: str)
+    -> tuple[Bundle, Scenario]
+build_distances(bundle: Bundle, scenario: Scenario)
+    -> list[dict]
+validate_solution(bundle: Bundle, scenario: Scenario,
+                  result: Result) -> Validation
+solve_scenario(bundle: Bundle, scenario: Scenario,
+               fixed_facilities: list[dict] | None = None) -> Result
+run_baseline(bundle: Bundle, scenario: Scenario) -> Result
+parse_request(text: str, scenario: Scenario) -> Patch
+apply_patch(scenario: Scenario, patch: Patch) -> Scenario
+explain_result(scenario: Scenario, result: Result,
+               validation: Validation) -> str
+run_scenario(bundle: Bundle, scenario: Scenario,
+             request: str | None = None) -> dict
+render_dashboard(response: dict, baseline: Result | None) -> None
+Owner / module
+Behaviour
+Shaza / data
+load_bundle reads processed CSV/config and facility options; build_distances makes complete
+directed stage links with great-circle x1.3.
+Reshma / optimizer
+None chooses sites and sizes; fixed_facilities is the complete list of {candidate_id,size}, all
+unlisted sites closed. Returns honest solver status.
+Reshma / baseline
+Fix all 80 small depots and eight large refineries. Filter source-depot links to each source’s own
+depot on a bundle copy; solve flows.
+Syakir / agent & service
+Claude converts language to Patch. Service validates patch, solves, validates independently and
+explains. Solver calculates all numbers.
+Sarah / app
+Renders response and same-scenario baseline. Joins coordinates from candidates by
+candidate_id. Displays source/provenance and status.
+
+
+Shared contract / outputs
+Result fields: schema_version:str; scenario_id:str; provenance:mock|solver|cached;
+status:optimal|feasible|infeasible|no_solution|error; runtime_s:number; mip_gap:number|null; message:str;
+facilities:list; flows:list; deliveries_t_per_year:dict; costs:dict; truck_trips:optional list.
+Object
+Exact fields / example
+facilities[]
+candidate_id, kind, size, input_t_per_year, output_t_per_year. Example R1, refinery, small, 500, 100.
+Coordinates join from candidates; report them in UI/export.
+flows[]
+from_id, to_id, stage, tonnes_per_year, mode. Example R1, TRK, refinery_airport, 25, barge.
+costs
+capex_usd; annualised_capex_usd_per_year; fixed_opex_usd_per_year; variable_opex_usd_per_year;
+opex_usd_per_year; transport_usd_per_year; total_usd_per_year. All finite numbers.
+truck_trips[]
+from_id, to_id, stage, small_trip_equivalents_per_year, large_trip_equivalents_per_year. Example S1, D1,
+source_depot, 166.666667, 55.555556. Truck edges only.
+Validation
+valid:bool; checks:list[{name:str,passed:bool,detail:str}]; errors:list[str]. No feasible result => valid=false, not
+evidence of a solver defect.
+Patch
+schema_version:str; status:ready|clarify|unsupported;
+changes:list[{airport_id:str,new_demand_t_per_year:number}]; question:str|null.
+Service response
+Exactly scenario, result, validation, explanation, clarification. result and validation may be null while clarification
+is pending. explanation:str; clarification:str|null.
+Failure: infeasible proves no solution; no_solution means no incumbent found before the solver stopped, not
+proven infeasibility. Both use empty facilities/flows/deliveries/costs and null gap. Never show zeros as a cheap
+network. API error leaves the scenario unchanged. Hide unvalidated flows.
+CapEx is upfront USD, not added directly to annual total. opex = fixed + variable; total = annualised CapEx + opex
++ transport. Do not double-count the fixed/variable breakdown. TRK remains stage refinery_airport; mode is
+barge.
+
+
+Shared contract / mock fixtures
+Every laptop can start immediately. mocks/bundle.json, scenario.json, result.json, service_response.json,
+validation.json, patch.json, agent_response.json and request.json cover all interfaces. CSV mirrors are supplied.
+Mock distances are effective 100 km on each final leg, deliberately synthetic; do not recompute them as
+geography.
+Fixture element
+v2.0 value
+Supply and yields
+S1 supplies 500 t/year; D1 loses no mass; R1 yield .20; four airports demand 25 t each.
+Facilities
+D1 small + R1 small. Intakes 500 t each, refinery output 100 t. CapEx $482,250,000.
+Annualised CapEx
+482,250,000 / 20 = $24,112,500/year.
+Fixed OpEx
+482,250,000 x .05 = $24,112,500/year.
+Variable OpEx
+500 x $5 + 500 x $60 = $32,500/year.
+Transport
+100 t SAF x 100 km x $0.08 = $800/year. Other links are zero km.
+Expected total
+$24,112,500 + $24,112,500 + $32,500 + $800 = $48,258,300/year.
+Trips
+Source-depot 500/3 and 500/9; depot-refinery 500/18 and 500/30. Three truck final legs 25/16 and
+25/32. No TRK truck record.
+python -m pytest tests/test_contract_fixtures.py -q
+Expected: 6 passed. Tests cover schema/signatures, fixture totals, independent validation, malformed results,
+patch isolation, capacity proof and tiny MILP. Required interface checkpoint: 13:40. After that, extra role tests are
+optional if behind; always perform the final manual smoke test.
+Fixture BPN +20% is intentionally infeasible: 105 t demand exceeds 500 x .20 = 100 t available SAF. Use full-data
+BPN +20% for the successful live demo.
+
+
+Shared contract / fixed parameters
+These are organiser-specified, from challenge3_parameters.xlsx (facilities, transport, assumptions sheets),
+challenge3_airports_4.csv and Summary of Updates, page 2. They replace the former demonstration
+assumptions.
+Facility / size
+Intake t/year
+CapEx USD
+Fixed OpEx/year
+Variable USD/t in
+Depot small
+150,000
+2,250,000
+112,500
+5
+Depot large
+300,000
+4,500,000
+225,000
+4
+Refinery small
+500,000
+480,000,000
+24,000,000
+60
+Refinery large
+1,087,000
+765,000,000
+38,250,000
+55
+One-year model. CapEx/20, no interest. Refinery yield .20; depot yield 1. Demand 300,000 t SAF/year at PNK,
+PKN, BPN and TRK. Capacity is always biomass intake. Distance is great-circle x1.3. Unused biomass is allowed.
+Stage
+Rate USD/t-km
+Small / large payload t
+Mode
+source_depot
+.10
+3 / 9
+truck
+depot_refinery
+.12
+18 / 30
+truck
+refinery_airport
+.08
+16 / 32
+truck except TRK
+refinery -> TRK
+.08
+not applicable
+barge; no fixed cost
+Truck size changes trip equivalents (tonnes/payload), not cost, because both sizes share the same per-tonne-km
+rate. Trip equivalents are not rounded dispatch counts. Barge trips are not estimated.
+Owner: Shaza. config/facilities.json holds size-specific costs; config/assumptions*.json hold scenarios. Keep
+organiser values separate from team choices such as candidate recipe, solver time/gap and flow simplifications.
+
+
+Shared contract / feasible scenarios
+Scenario
+SAF demand kt/year
+Biomass kt/year
+Proof
+Base: 300 each
+1,200
+6,000
+6,000 < 6,800
+BPN 360; others 300
+1,260
+6,300
+6,300 < 6,800
+All airports 345 (+15%)
+1,380
+6,900
+6,900 > 6,800: infeasible
+Deterministic baseline, now feasible
+Open a small depot at each of the 80 sources and a large refinery at each of the eight refinery candidates. Each
+source may send only to its co-located depot. All depot-refinery and refinery-airport links remain available.
+Optimise continuous flows only, with the same costs, yields and demand as the MILP.
+Each source has less than 150 kt/year, so its small depot can accept its entire supply. Eight large refineries
+provide 8 x 1,087 = 8,696 kt/year intake. Construct a feasible base by collecting 6,000/6,800 of each source and
+distributing intake equally: 750 kt per refinery. For BPN+20%, collect 6,300/6,800 and send 787.5 kt per refinery.
+Both are below 1,087. Distribute SAF to each airport in proportion to its demand. All required links exist.
+At least ceil(6,000/1,087)=6 large refineries are needed for base, and ceil(6,300/1,087)=6 for BPN+20%. The eight
+distinct candidates are sufficient. Finite candidates are our team assumption; do not claim the optimum over all
+land in Kalimantan.
+Why the comparison is fair
+The baseline feasible set is contained in the MILP feasible set. Same scenario, transport factors, objective and
+costs. Base vs BPN is a demand-change comparison, not a savings claim. Only compare each MILP result with its
+matching baseline.
+
+
+Shared contract / setup & Git
+Windows PowerShell
+macOS / Linux
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
+python scripts/prepare_data.py
+python -m pytest tests/test_contract_fixtures.py -q
+python scripts/prepare_data.py
+python -m pytest tests/test_contract_fixtures.py -q
+python scripts/check_full_scenarios.py
+python -m streamlit run app.py
+python scripts/check_full_scenarios.py
+python -m streamlit run app.py
+Run commands from the repository root, using Python 3.11 or newer. If PowerShell activation is
+blocked, call .venv\Scripts\python.exe directly. Setup and contract tests do not need an API key or .env.
+For optional live Claude features, copy .env.example to .env only if .env does not already exist, then
+configure credentials locally. Retain CLAUDE_MODEL=claude-opus-5-5. Never commit credentials.
+Live API verification is outside this starter setup.
+git clone <team-repo-url>
+cd <team-repo-folder>
+git switch <your-existing-branch>
+git add <only-your-owned-files>
+git commit -m "Implement owned module against v2 contracts"
+git push -u origin HEAD
+Branches: shaza, reshma-optimizer, sarah-dashboard, feat/syakir-agent-service. The shared starter PR is on
+setup/saf-v2-starter; Sarah owns its integration into main. Sarah merges Shaza data/contracts first, Reshma
+solver second, Syakir service third, Sarah UI last. After Sarah merges, preserve local work, git fetch origin,
+then git merge origin/main on your existing branch. Resolve conflicts with the affected file owner; never overwrite their work blindly or
+force-push shared main.
+Only Shaza edits shared requirements/config/contracts unless agreed. A module’s mock already exists: continue
+coding independently. First-valid submission is an actual working end-to-end build, not a mock-only screen. Save
+submission receipt and commit SHA.
