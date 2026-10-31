@@ -63,3 +63,9 @@ Syakir's current branch keeps his implementation under `syakir_agent_service/saf
 Capacity is intake only. Cost = CapEx/20 + fixed OpEx + variable OpEx + transport. TRK final leg barge and excluded from truck trips.
 
 See docs/CHANGELOG.md, assumptions_notes.md and evaluation.md. All five guides repeat identical shared contracts.
+
+## Team
+- Reshma
+- Sarah
+- Shaza
+- Syakir
