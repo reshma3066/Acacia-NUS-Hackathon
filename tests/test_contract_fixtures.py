@@ -41,3 +41,26 @@ def test_tiny_solver():
  b,c=j('mocks/bundle.json'),j('mocks/scenario.json');r=optimizer.solve_scenario(b,c)
  assert validation.validate_solution(b,c,r)['valid']
  assert r['costs']['total_usd_per_year']==pytest.approx(48258300)
+
+def test_use_all_supply():
+    b = j('mocks/bundle.json')
+    c = j('mocks/scenario.json')
+    r = j('mocks/result.json')
+
+    # The fixture uses 500 tonnes; make 600 available.
+    b['sources'][0]['supply_t_per_year'] = 600
+
+    # Leaving biomass unused is allowed.
+    c['use_all_supply'] = False
+    assert validation.validate_solution(b, c, r)['valid']
+
+    # Requiring all biomass must reject this same result.
+    c['use_all_supply'] = True
+    report = validation.validate_solution(b, c, r)
+
+    assert not report['valid']
+    assert any(
+        check['name'].startswith('full supply ')
+        and not check['passed']
+        for check in report['checks']
+    )
