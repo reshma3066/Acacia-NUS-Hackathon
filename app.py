@@ -75,7 +75,7 @@ def _failure_screen(st,response:dict,bundle_supply_t:float|None)->None:
         st.error('**VALIDATION FAILED** - the solver returned a plan but the independent validator rejected it. Do not use these results.')
         if v:
             st.write('Failed checks:')
-            st.dataframe([c for c in v['checks'] if not c['passed']],use_container_width=True)
+            st.dataframe([c for c in v['checks'] if not c['passed']],width='stretch')
             for e in v.get('errors',[]):st.write('-',e)
     if status=='infeasible' and bundle_supply_t is not None:
         sc=response['scenario'];need=sum(sc['demand_t_per_year'].values());cap=bundle_supply_t*sc['refinery_yield']
@@ -148,22 +148,61 @@ def render_dashboard(response: dict, baseline: Result | None) -> None:
 
     with st.expander(f"Evidence: {sum(c['passed'] for c in v['checks'])}/{len(v['checks'])} validator checks passed"):
         st.write(r.get('message',''))
-        st.dataframe(v['checks'],use_container_width=True)
+        st.dataframe(v['checks'],width='stretch')
         st.caption('Candidate-site MILP: optimal over the finite candidate set, not a global land-location optimum.')
 
+    _network_section(st,response,load_bundle_for(scenario))
+
+def facility_rows(bundle:dict,result:Result)->list[dict]:
+    """Selected facilities joined to candidate coordinates by candidate_id, with intake capacity and utilisation."""
+    coords={c['candidate_id']:c for c in bundle['candidates']}
+    rows=[]
+    for f in sorted(result['facilities'],key=lambda f:(f['kind']!='refinery',f['candidate_id'])):
+        c=coords[f['candidate_id']];cap=bundle['facility_options'][f['kind']][f['size']]['capacity_t_per_year']
+        rows.append(dict(candidate_id=f['candidate_id'],kind=f['kind'],size=f['size'],latitude=c['latitude'],longitude=c['longitude'],
+                         intake_t_per_year=round(f['input_t_per_year'],1),output_t_per_year=round(f['output_t_per_year'],1),
+                         intake_capacity_t_per_year=cap,utilisation_pct=round(100*f['input_t_per_year']/cap,1)))
+    return rows
+
+def _csv(rows:list[dict])->str:
+    import csv,io
+    buf=io.StringIO()
+    if rows:
+        w=csv.DictWriter(buf,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+    return buf.getvalue()
+
+def _network_section(st,response:dict,bundle:dict)->None:
     from scripts.render_network import make_figure
     import matplotlib.pyplot as plt
-    bundle=load_bundle_for(scenario)
-    fig=make_figure(bundle,r)
-    fig.axes[0].set_title('Computed candidate-site network | '+scenario['scenario_id'],loc='left')
+    r,sid=response['result'],response['scenario']['scenario_id']
+    st.subheader('Selected network')
+    fig=make_figure(bundle,r,'Computed candidate-site network | '+sid)
     st.pyplot(fig)
     plt.close(fig)
-    coords={c['candidate_id']:c for c in bundle['candidates']}
-    facilities=[f|{k:coords[f['candidate_id']][k] for k in ['latitude','longitude']} for f in r['facilities']]
-    st.dataframe(facilities);st.dataframe(r['flows'])
-    st.download_button('Download facilities with coordinates',json.dumps(facilities,indent=2),'facilities.json')
-    st.caption('TRK last leg: barge, no truck trips. Truck sizes affect trips, not tonne-km costs.')
-    st.download_button('Download result JSON',json.dumps(response,indent=2),'result.json')
+    barge=[e for e in r['flows'] if e['mode']=='barge']
+    trk_trucks=[t for t in r.get('truck_trips') or [] if t['to_id']=='TRK']
+    st.caption(f"TRK last leg: {len(barge)} barge link(s), {sum(e['tonnes_per_year'] for e in barge)/1000:,.1f} kt SAF/yr; "
+               +('no truck trips to TRK.' if not trk_trucks else f'WARNING: {len(trk_trucks)} truck-trip record(s) to TRK.')
+               +' Co-located zero-distance links may be invisible on the map.')
+
+    facilities=facility_rows(bundle,r)
+    depots=[f for f in facilities if f['kind']=='depot'];refs=[f for f in facilities if f['kind']=='refinery']
+    st.subheader(f'Facilities: {len(refs)} refineries, {len(depots)} depots')
+    st.dataframe(facilities,width='stretch',hide_index=True,column_config={
+        'latitude':st.column_config.NumberColumn(format='%.4f'),'longitude':st.column_config.NumberColumn(format='%.4f'),
+        'utilisation_pct':st.column_config.ProgressColumn('utilisation %',min_value=0,max_value=100,format='%.1f%%')})
+    c=st.columns(3)
+    c[0].download_button('Facilities + coordinates (CSV)',_csv(facilities),f'facilities_{sid}.csv','text/csv')
+    c[1].download_button('Facilities + coordinates (JSON)',json.dumps(facilities,indent=2),f'facilities_{sid}.json','application/json')
+    c[2].download_button('Full response (JSON)',json.dumps(response,indent=2),f'response_{sid}.json','application/json')
+
+    with st.expander(f"Material flows ({len(r['flows'])} links)"):
+        st.dataframe(r['flows'],width='stretch',hide_index=True)
+        st.download_button('Flows (CSV)',_csv(r['flows']),f'flows_{sid}.csv','text/csv')
+    with st.expander('Truck-trip equivalents (operational context)'):
+        st.caption('Trips = tonnes / payload, not rounded dispatch counts. Both truck sizes share the same tonne-km cost, '
+                   'so truck size changes trips, not cost. Barge trips are not estimated.')
+        st.dataframe(r.get('truck_trips') or [],width='stretch',hide_index=True)
 
 if __name__=='__main__':
     import streamlit as st
