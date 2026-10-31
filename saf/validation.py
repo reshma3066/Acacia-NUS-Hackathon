@@ -19,7 +19,13 @@ def validate_solution(bundle: Bundle, scenario: Scenario,
             seen.add(key);inc[b]=inc.get(b,0)+t;out[a]=out.get(a,0)+t
             check('mode '+str(key),e.get('mode')==('barge' if stage=='refinery_airport' and b=='TRK' else 'truck'))
             transport+=t*dist[key]*scenario['transport_usd_per_t_km'][stage]
-        for sid,s in sources.items():check('supply '+sid,out.get(sid,0)<=s['supply_t_per_year']+.01)
+        for sid, s in sources.items():
+            used = out.get(sid, 0)
+            supply = s['supply_t_per_year']
+            check('supply ' + sid, used <= supply + .01)
+
+            if scenario.get('use_all_supply', False):
+                check('full supply ' + sid, close(used, supply))
         capex=fix=var=0.
         for cid,r in candidates.items():
             if cid not in opened:check('closed '+cid,inc.get(cid,0)<.01 and out.get(cid,0)<.01);continue
