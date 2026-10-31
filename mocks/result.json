@@ -1,0 +1,121 @@
+{
+  "schema_version": "2.0",
+  "scenario_id": "fixture-v2.0",
+  "provenance": "mock",
+  "status": "feasible",
+  "runtime_s": 0.0,
+  "mip_gap": null,
+  "message": "Synthetic interface fixture; not a computed optimum.",
+  "facilities": [
+    {
+      "candidate_id": "D1",
+      "kind": "depot",
+      "size": "small",
+      "input_t_per_year": 500,
+      "output_t_per_year": 500
+    },
+    {
+      "candidate_id": "R1",
+      "kind": "refinery",
+      "size": "small",
+      "input_t_per_year": 500,
+      "output_t_per_year": 100
+    }
+  ],
+  "flows": [
+    {
+      "from_id": "S1",
+      "to_id": "D1",
+      "stage": "source_depot",
+      "tonnes_per_year": 500,
+      "mode": "truck"
+    },
+    {
+      "from_id": "D1",
+      "to_id": "R1",
+      "stage": "depot_refinery",
+      "tonnes_per_year": 500,
+      "mode": "truck"
+    },
+    {
+      "from_id": "R1",
+      "to_id": "PNK",
+      "stage": "refinery_airport",
+      "tonnes_per_year": 25,
+      "mode": "truck"
+    },
+    {
+      "from_id": "R1",
+      "to_id": "PKN",
+      "stage": "refinery_airport",
+      "tonnes_per_year": 25,
+      "mode": "truck"
+    },
+    {
+      "from_id": "R1",
+      "to_id": "BPN",
+      "stage": "refinery_airport",
+      "tonnes_per_year": 25,
+      "mode": "truck"
+    },
+    {
+      "from_id": "R1",
+      "to_id": "TRK",
+      "stage": "refinery_airport",
+      "tonnes_per_year": 25,
+      "mode": "barge"
+    }
+  ],
+  "deliveries_t_per_year": {
+    "PNK": 25,
+    "PKN": 25,
+    "BPN": 25,
+    "TRK": 25
+  },
+  "costs": {
+    "capex_usd": 482250000,
+    "annualised_capex_usd_per_year": 24112500,
+    "opex_usd_per_year": 24145000,
+    "transport_usd_per_year": 800,
+    "total_usd_per_year": 48258300,
+    "fixed_opex_usd_per_year": 24112500,
+    "variable_opex_usd_per_year": 32500
+  },
+  "truck_trips": [
+    {
+      "from_id": "S1",
+      "to_id": "D1",
+      "stage": "source_depot",
+      "small_trip_equivalents_per_year": 166.66666666666666,
+      "large_trip_equivalents_per_year": 55.55555555555556
+    },
+    {
+      "from_id": "D1",
+      "to_id": "R1",
+      "stage": "depot_refinery",
+      "small_trip_equivalents_per_year": 27.77777777777778,
+      "large_trip_equivalents_per_year": 16.666666666666668
+    },
+    {
+      "from_id": "R1",
+      "to_id": "PNK",
+      "stage": "refinery_airport",
+      "small_trip_equivalents_per_year": 1.5625,
+      "large_trip_equivalents_per_year": 0.78125
+    },
+    {
+      "from_id": "R1",
+      "to_id": "PKN",
+      "stage": "refinery_airport",
+      "small_trip_equivalents_per_year": 1.5625,
+      "large_trip_equivalents_per_year": 0.78125
+    },
+    {
+      "from_id": "R1",
+      "to_id": "BPN",
+      "stage": "refinery_airport",
+      "small_trip_equivalents_per_year": 1.5625,
+      "large_trip_equivalents_per_year": 0.78125
+    }
+  ]
+}
