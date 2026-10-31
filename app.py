@@ -204,18 +204,59 @@ def _network_section(st,response:dict,bundle:dict)->None:
                    'so truck size changes trips, not cost. Barge trips are not estimated.')
         st.dataframe(r.get('truck_trips') or [],width='stretch',hide_index=True)
 
-if __name__=='__main__':
-    import streamlit as st
+SCENARIOS={'assumptions_full':'Base: 300 kt SAF at each airport',
+           'assumptions_full_bpn20':'BPN +20%: BPN 360 kt, others 300 kt',
+           'assumptions_full_infeasible':'All airports +15%: 345 kt each (infeasible)'}
+
+def solve_live(config:str,request:str|None)->tuple[dict,Result|None]:
+    """Claude patch (optional) -> MILP -> independent validation -> same-scenario baseline."""
     from saf.data import load_bundle
     from saf.service import run_scenario
     from saf.baseline import run_baseline
-    choice=st.sidebar.selectbox('Scenario',['assumptions_full','assumptions_full_bpn20','assumptions_full_infeasible'])
-    request=st.sidebar.text_input('Ask Claude for a demand change')
-    if st.sidebar.button('Solve'):
+    b,c=load_bundle(str(ROOT/'data/processed'),str(ROOT/'config'/(config+'.json')))
+    response=run_scenario(b,c,request)
+    baseline=run_baseline(b,response['scenario']) if is_usable(response['result'],response['validation']) else None
+    return response,baseline
+
+def load_cached(config:str)->tuple[dict,Result|None]:
+    """Replay a recorded solver run from docs/, relabelled provenance=cached so it is never mistaken for a live solve."""
+    def read(kind):
+        d=json.loads((ROOT/'docs'/f'{config}_{kind}.json').read_text())
+        if d['result']:d['result']=d['result']|{'provenance':'cached'}
+        return d
+    milp,base=read('milp'),read('baseline')
+    response=dict(scenario=milp['scenario'],result=milp['result'],validation=milp['validation'],
+                  explanation=f'CACHED REPLAY of a recorded solver run (docs/{config}_milp.json). No live solve or Claude call was made.',
+                  clarification=None)
+    return response,base['result'] if is_usable(base['result'],base['validation']) else None
+
+def main()->None:
+    import streamlit as st
+    st.set_page_config(page_title='SAF Planner | Kalimantan',layout='wide')
+    st.sidebar.header('Plan a scenario')
+    mode=st.sidebar.radio('Mode',['Live solve','Cached replay'],help='Cached replay shows recorded solver runs, labelled as cached. Use it if the network or API fails.')
+    config=st.sidebar.selectbox('Starting scenario',list(SCENARIOS),format_func=SCENARIOS.get)
+    request=None
+    if mode=='Live solve':
+        request=st.sidebar.text_input('Ask Claude for a demand change (optional)',placeholder='Increase BPN demand by 20%').strip() or None
+        st.sidebar.caption('Claude only turns your words into a bounded demand patch. The solver computes every number; the validator checks it.')
+    if st.sidebar.button('Solve' if mode=='Live solve' else 'Load recorded run',type='primary'):
+        # Clear first so a failure can never leave the previous success on screen.
         st.session_state.pop('last',None)
-        b,c=load_bundle('data/processed','config/'+choice+'.json')
-        with st.spinner('Solving and validating'):
-            response=run_scenario(b,c,request or None)
-            baseline=run_baseline(b,response['scenario']) if is_usable(response['result'],response['validation']) else None
-            st.session_state['last']=(response,baseline)
-    if 'last' in st.session_state:render_dashboard(*st.session_state['last'])
+        try:
+            with st.spinner('Solving, validating and running the matching baseline...' if mode=='Live solve' else 'Loading recorded run...'):
+                st.session_state['last']=dict(view=solve_live(config,request) if mode=='Live solve' else load_cached(config),
+                                              mode=mode,request=request)
+        except Exception as e:
+            st.error(f'Run failed ({type(e).__name__}: {e}). Nothing is shown from earlier runs. Retry, or switch to Cached replay.')
+    last=st.session_state.get('last')
+    if not last:
+        st.title('SAF Planner | Kalimantan')
+        st.info('Choose a scenario in the sidebar and press Solve.')
+        return
+    st.sidebar.divider()
+    st.sidebar.caption(f"Showing: **{last['mode']}**"+(f" | Claude request: “{last['request']}”" if last['request'] else ' | no Claude request'))
+    render_dashboard(*last['view'])
+
+if __name__=='__main__':
+    main()

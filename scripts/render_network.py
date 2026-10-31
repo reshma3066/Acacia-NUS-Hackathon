@@ -46,11 +46,16 @@ def make_figure(bundle,result,title='Computed candidate-site MILP network'):
         ax.scatter(*xy[s['source_id']],s=max(s['supply_t_per_year']/2000,12),color=BIOMASS,
                    alpha=.75 if s['source_id'] in used else .25,edgecolor='none',zorder=3)
 
-    for f in sorted(result['facilities'],key=lambda f:f['kind']):
-        ref=f['kind']=='refinery';large=f['size']=='large'
-        ax.scatter(*xy[f['candidate_id']],marker='^' if ref else 's',color=REFINERY if ref else DEPOT,
+    labelled=[]
+    for f in sorted(result['facilities'],key=lambda f:(f['kind'],xy[f['candidate_id']])):
+        ref=f['kind']=='refinery';large=f['size']=='large';p=xy[f['candidate_id']]
+        ax.scatter(*p,marker='^' if ref else 's',color=REFINERY if ref else DEPOT,
                    s=(200 if large else 120) if ref else (55 if large else 30),edgecolor='#263c46',lw=.8,zorder=5 if ref else 4)
-        if ref:ax.annotate(short_id(f['candidate_id']),xy[f['candidate_id']],xytext=(6,7),textcoords='offset points',fontsize=8,zorder=8)
+        if ref:
+            # Refineries within ~0.3 deg of an already-labelled one get their label stacked above it.
+            near=sum(abs(p[0]-q[0])<.3 and abs(p[1]-q[1])<.3 for q in labelled);labelled.append(p)
+            ax.annotate(short_id(f['candidate_id']),p,xytext=(-26+30*(near%2),8+11*near),textcoords='offset points',fontsize=8,zorder=8,
+                        bbox=dict(boxstyle='round,pad=.15',fc='white',ec='none',alpha=.7))
 
     for a in bundle['airports']:
         ax.scatter(*xy[a['airport_id']],s=230,marker='*',color=AIRPORT,edgecolor='white',lw=.6,zorder=7)
