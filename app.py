@@ -238,7 +238,13 @@ def main()->None:
     config=st.sidebar.selectbox('Starting scenario',list(SCENARIOS),format_func=SCENARIOS.get)
     request=None
     if mode=='Live solve':
-        request=st.sidebar.text_input('Ask Claude for a demand change (optional)',placeholder='Increase BPN demand by 20%').strip() or None
+        AIRPORTS={'PNK':'Supadio (Pontianak)','PKN':'Iskandar (Pangkalan Bun)',
+                  'BPN':'Sepinggan (Balikpapan)','TRK':'Juwata (Tarakan)'}
+        airport=st.sidebar.selectbox('Airport to change',list(AIRPORTS),format_func=lambda k:f'{k} – {AIRPORTS[k]}')
+        pct=st.sidebar.number_input('Demand change (%)',min_value=-100.0,max_value=200.0,value=0.0,step=5.0,
+                                    help='0 = no change (plain solve, no Claude call)')
+        request=None if pct==0 else f"{'Increase' if pct>0 else 'Decrease'} {airport} demand by {abs(pct):g}%"
+        st.sidebar.caption(f"Request sent to Claude: {request or 'none'}")
         st.sidebar.caption('Claude only turns your words into a bounded demand patch. The solver computes every number; the validator checks it.')
     if st.sidebar.button('Solve' if mode=='Live solve' else 'Load recorded run',type='primary'):
         # Clear first so a failure can never leave the previous success on screen.
