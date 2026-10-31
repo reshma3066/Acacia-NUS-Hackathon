@@ -1,0 +1,120 @@
+{
+  "sources": [
+    {
+      "source_id": "S1",
+      "province": "Demo",
+      "district": "Demo",
+      "latitude": -1.0,
+      "longitude": 110.0,
+      "supply_t_per_year": 500
+    }
+  ],
+  "airports": [
+    {
+      "airport_id": "PNK",
+      "name": "Supadio Intl (Pontianak)",
+      "latitude": -0.15071099996566772,
+      "longitude": 109.40399932861328
+    },
+    {
+      "airport_id": "PKN",
+      "name": "Iskandar (Pangkalan Bun)",
+      "latitude": -2.70519995689,
+      "longitude": 111.672996521
+    },
+    {
+      "airport_id": "BPN",
+      "name": "Sultan Aji Muhammad Sulaiman Sepinggan Intl (Balikpapan)",
+      "latitude": -1.26827001572,
+      "longitude": 116.893997192
+    },
+    {
+      "airport_id": "TRK",
+      "name": "Juwata Intl (Tarakan)",
+      "latitude": 3.326667,
+      "longitude": 117.569444
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "D1",
+      "kind": "depot",
+      "latitude": -1.0,
+      "longitude": 110.0
+    },
+    {
+      "candidate_id": "R1",
+      "kind": "refinery",
+      "latitude": -1.0,
+      "longitude": 110.0
+    }
+  ],
+  "distances": [
+    {
+      "from_id": "S1",
+      "to_id": "D1",
+      "stage": "source_depot",
+      "distance_km": 0.0
+    },
+    {
+      "from_id": "D1",
+      "to_id": "R1",
+      "stage": "depot_refinery",
+      "distance_km": 0.0
+    },
+    {
+      "from_id": "R1",
+      "to_id": "PNK",
+      "stage": "refinery_airport",
+      "distance_km": 100.0
+    },
+    {
+      "from_id": "R1",
+      "to_id": "PKN",
+      "stage": "refinery_airport",
+      "distance_km": 100.0
+    },
+    {
+      "from_id": "R1",
+      "to_id": "BPN",
+      "stage": "refinery_airport",
+      "distance_km": 100.0
+    },
+    {
+      "from_id": "R1",
+      "to_id": "TRK",
+      "stage": "refinery_airport",
+      "distance_km": 100.0
+    }
+  ],
+  "facility_options": {
+    "depot": {
+      "small": {
+        "capex_usd": 2250000,
+        "capacity_t_per_year": 150000,
+        "fixed_opex_usd_per_year": 112500.0,
+        "variable_opex_usd_per_tonne_in": 5
+      },
+      "large": {
+        "capex_usd": 4500000,
+        "capacity_t_per_year": 300000,
+        "fixed_opex_usd_per_year": 225000.0,
+        "variable_opex_usd_per_tonne_in": 4
+      }
+    },
+    "refinery": {
+      "small": {
+        "capex_usd": 480000000,
+        "capacity_t_per_year": 500000,
+        "fixed_opex_usd_per_year": 24000000.0,
+        "variable_opex_usd_per_tonne_in": 60
+      },
+      "large": {
+        "capex_usd": 765000000,
+        "capacity_t_per_year": 1087000,
+        "fixed_opex_usd_per_year": 38250000.0,
+        "variable_opex_usd_per_tonne_in": 55
+      }
+    }
+  }
+}

@@ -1,0 +1,5434 @@
+{
+  "scenario": {
+    "schema_version": "2.0",
+    "scenario_id": "full-base-v2.0",
+    "assumptions_status": "ORGANISER_SPECIFIED_PARAMETERS_TEAM_CANDIDATE_RECIPE",
+    "period_years": 1,
+    "demand_t_per_year": {
+      "PNK": 300000,
+      "PKN": 300000,
+      "BPN": 300000,
+      "TRK": 300000
+    },
+    "depot_yield": 1.0,
+    "refinery_yield": 0.2,
+    "use_all_supply": false,
+    "distance_method": "haversine",
+    "distance_multiplier": 1.3,
+    "annualisation_years": 20,
+    "discount_rate": 0.0,
+    "transport_usd_per_t_km": {
+      "source_depot": 0.1,
+      "depot_refinery": 0.12,
+      "refinery_airport": 0.08
+    },
+    "solver_time_limit_s": 30,
+    "solver_rel_gap": 0.01
+  },
+  "result": {
+    "schema_version": "2.0",
+    "scenario_id": "full-base-v2.0",
+    "provenance": "solver",
+    "status": "feasible",
+    "runtime_s": 12.03181240999993,
+    "mip_gap": 0.009809301871540452,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal) Candidate-set result; inspect mip_gap.",
+    "facilities": [
+      {
+        "candidate_id": "D_KAL_SUP_04",
+        "kind": "depot",
+        "size": "small",
+        "input_t_per_year": 59840.000000000204,
+        "output_t_per_year": 59840.000000000204
+      },
+      {
+        "candidate_id": "D_KAL_SUP_08",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 274970.0000000006,
+        "output_t_per_year": 274970.0000000006
+      },
+      {
+        "candidate_id": "D_KAL_SUP_10",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_11",
+        "kind": "depot",
+        "size": "small",
+        "input_t_per_year": 92160.0,
+        "output_t_per_year": 92160.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_23",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_28",
+        "kind": "depot",
+        "size": "small",
+        "input_t_per_year": 150000.0,
+        "output_t_per_year": 150000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_34",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_39",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_40",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_42",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_44",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_49",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_53",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_54",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_64",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_65",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_66",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_67",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_68",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_73",
+        "kind": "depot",
+        "size": "small",
+        "input_t_per_year": 99029.99999999985,
+        "output_t_per_year": 99029.99999999985
+      },
+      {
+        "candidate_id": "D_KAL_SUP_77",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_78",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 224000.00000000012,
+        "output_t_per_year": 224000.00000000012
+      },
+      {
+        "candidate_id": "D_KAL_SUP_79",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
+      },
+      {
+        "candidate_id": "R_KAL_SUP_34",
+        "kind": "refinery",
+        "size": "large",
+        "input_t_per_year": 1087000.0,
+        "output_t_per_year": 217400.0
+      },
+      {
+        "candidate_id": "R_KAL_SUP_42",
+        "kind": "refinery",
+        "size": "large",
+        "input_t_per_year": 1087000.0,
+        "output_t_per_year": 217400.0
+      },
+      {
+        "candidate_id": "R_KAL_SUP_67",
+        "kind": "refinery",
+        "size": "large",
+        "input_t_per_year": 1087000.0,
+        "output_t_per_year": 217400.0
+      },
+      {
+        "candidate_id": "R_KAL_SUP_49",
+        "kind": "refinery",
+        "size": "large",
+        "input_t_per_year": 1087000.0,
+        "output_t_per_year": 217400.0
+      },
+      {
+        "candidate_id": "R_KAL_SUP_77",
+        "kind": "refinery",
+        "size": "large",
+        "input_t_per_year": 564999.9999999998,
+        "output_t_per_year": 112999.99999999996
+      },
+      {
+        "candidate_id": "R_KAL_SUP_54",
+        "kind": "refinery",
+        "size": "large",
+        "input_t_per_year": 1087000.0,
+        "output_t_per_year": 217400.0
+      }
+    ],
+    "flows": [
+      {
+        "from_id": "KAL_SUP_01",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "tonnes_per_year": 69430.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_01",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "tonnes_per_year": 20689.999999999996,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_02",
+        "to_id": "D_KAL_SUP_78",
+        "stage": "source_depot",
+        "tonnes_per_year": 96600.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_04",
+        "to_id": "D_KAL_SUP_04",
+        "stage": "source_depot",
+        "tonnes_per_year": 59840.00000000021,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_04",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "tonnes_per_year": 16979.999999999764,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_04",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "tonnes_per_year": 22400.000000000033,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_05",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "tonnes_per_year": 2120.00000000009,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_06",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "tonnes_per_year": 87910.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_07",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "tonnes_per_year": 58799.9999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_07",
+        "to_id": "D_KAL_SUP_78",
+        "stage": "source_depot",
+        "tonnes_per_year": 30260.000000000106,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_08",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "tonnes_per_year": 94000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_09",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "tonnes_per_year": 26330.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_10",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "tonnes_per_year": 99510.00000000001,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_11",
+        "to_id": "D_KAL_SUP_11",
+        "stage": "source_depot",
+        "tonnes_per_year": 92159.99999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_12",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "tonnes_per_year": 93800.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_13",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "tonnes_per_year": 92810.00000000006,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_14",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "tonnes_per_year": 29340.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_15",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "tonnes_per_year": 88320.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_16",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "tonnes_per_year": 20109.999999999993,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_16",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "tonnes_per_year": 78140.00000000001,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_17",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "tonnes_per_year": 20159.99999999998,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_17",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "tonnes_per_year": 68110.00000000001,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_18",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "tonnes_per_year": 22139.999999999854,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_18",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "tonnes_per_year": 70750.00000000015,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_19",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "tonnes_per_year": 43580.000000000095,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_19",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "tonnes_per_year": 41309.999999999985,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_19",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "tonnes_per_year": 14819.999999999907,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_20",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "tonnes_per_year": 34100.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_21",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "tonnes_per_year": 90650.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_22",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "tonnes_per_year": 89000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_23",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "tonnes_per_year": 92520.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_24",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "tonnes_per_year": 96520.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_25",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "tonnes_per_year": 87999.99999999955,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_27",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "tonnes_per_year": 93249.99999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_28",
+        "to_id": "D_KAL_SUP_28",
+        "stage": "source_depot",
+        "tonnes_per_year": 88600.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_29",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "tonnes_per_year": 88410.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_30",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "tonnes_per_year": 10070.000000000235,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_30",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "tonnes_per_year": 89739.99999999978,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_31",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "tonnes_per_year": 96650.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_32",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "tonnes_per_year": 92040.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_33",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "tonnes_per_year": 96690.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_34",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "tonnes_per_year": 87840.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_35",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "tonnes_per_year": 99900.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_36",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "tonnes_per_year": 91250.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_38",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "tonnes_per_year": 23619.99999999998,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_39",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "tonnes_per_year": 95760.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_40",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "tonnes_per_year": 22840.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_41",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "tonnes_per_year": 31149.999999999964,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_41",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "tonnes_per_year": 59930.00000000004,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_42",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "tonnes_per_year": 88760.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_43",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "tonnes_per_year": 34389.99999999985,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_43",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "tonnes_per_year": 53570.00000000015,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_44",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "tonnes_per_year": 91870.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_45",
+        "to_id": "D_KAL_SUP_28",
+        "stage": "source_depot",
+        "tonnes_per_year": 61399.99999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_45",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "tonnes_per_year": 33150.00000000004,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_46",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "tonnes_per_year": 96190.00000000016,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_47",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "tonnes_per_year": 88600.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_48",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "tonnes_per_year": 88420.00000000004,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_48",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "tonnes_per_year": 529.9999999999585,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_49",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "tonnes_per_year": 94090.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_50",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "tonnes_per_year": 90030.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_51",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "tonnes_per_year": 93010.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_52",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "tonnes_per_year": 90570.00000000001,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_53",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "tonnes_per_year": 91700.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_54",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "tonnes_per_year": 92830.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_55",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "tonnes_per_year": 89760.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_56",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "tonnes_per_year": 89470.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_57",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "tonnes_per_year": 25070.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_58",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "tonnes_per_year": 24880.000000000095,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_61",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "tonnes_per_year": 89760.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_62",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "tonnes_per_year": 26509.999999999993,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_62",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "tonnes_per_year": 69540.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_63",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "tonnes_per_year": 7540.000000000603,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_63",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "tonnes_per_year": 85189.9999999994,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_64",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "tonnes_per_year": 89400.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_65",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "tonnes_per_year": 88100.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_66",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "tonnes_per_year": 98639.99999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_67",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "tonnes_per_year": 89300.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_68",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "tonnes_per_year": 35940.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_69",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "tonnes_per_year": 30990.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_70",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "tonnes_per_year": 17250.000000000113,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_71",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "tonnes_per_year": 93870.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_72",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "tonnes_per_year": 29259.999999999905,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_72",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "tonnes_per_year": 70160.0000000001,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_73",
+        "to_id": "D_KAL_SUP_73",
+        "stage": "source_depot",
+        "tonnes_per_year": 99030.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_74",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "tonnes_per_year": 85430.00000000016,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_74",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "tonnes_per_year": 14179.999999999836,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_75",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "tonnes_per_year": 93870.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_76",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "tonnes_per_year": 27790.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_77",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "tonnes_per_year": 91320.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_78",
+        "to_id": "D_KAL_SUP_78",
+        "stage": "source_depot",
+        "tonnes_per_year": 97140.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_79",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "tonnes_per_year": 32549.999999999996,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_04",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 59840.000000000204,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_08",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 274970.0000000003,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_10",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_11",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 92160.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_23",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_28",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 150000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_34",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_39",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 212029.9999999997,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_39",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 87970.00000000028,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_40",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 299999.9999999997,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_42",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_44",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 299999.9999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_49",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_53",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 299999.9999999998,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_54",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_64",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_65",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 37000.000000000226,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_65",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 262999.99999999977,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_66",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 112999.99999999971,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_66",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 187000.00000000012,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_67",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 299999.9999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_68",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_73",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 99029.99999999985,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_77",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_78",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 224000.00000000012,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_79",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 300000.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R_KAL_SUP_34",
+        "to_id": "PNK",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 217400.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R_KAL_SUP_42",
+        "to_id": "PNK",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 82600.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R_KAL_SUP_42",
+        "to_id": "TRK",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 134800.0,
+        "mode": "barge"
+      },
+      {
+        "from_id": "R_KAL_SUP_67",
+        "to_id": "PKN",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 82600.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R_KAL_SUP_67",
+        "to_id": "TRK",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 134800.0,
+        "mode": "barge"
+      },
+      {
+        "from_id": "R_KAL_SUP_49",
+        "to_id": "PKN",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 217400.0,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R_KAL_SUP_77",
+        "to_id": "BPN",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 112999.99999999997,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R_KAL_SUP_54",
+        "to_id": "BPN",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 187000.00000000015,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R_KAL_SUP_54",
+        "to_id": "TRK",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 30399.99999999986,
+        "mode": "barge"
+      }
+    ],
+    "deliveries_t_per_year": {
+      "PNK": 300000.0,
+      "PKN": 300000.0,
+      "BPN": 300000.0000000001,
+      "TRK": 299999.9999999999
+    },
+    "costs": {
+      "capex_usd": 4684500000.0,
+      "annualised_capex_usd_per_year": 234225000.0,
+      "fixed_opex_usd_per_year": 234225000.0,
+      "variable_opex_usd_per_year": 354401030.0,
+      "opex_usd_per_year": 588626030.0,
+      "transport_usd_per_year": 123775311.34859325,
+      "total_usd_per_year": 946626341.3485932
+    },
+    "truck_trips": [
+      {
+        "from_id": "KAL_SUP_01",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 23143.333333333332,
+        "large_trip_equivalents_per_year": 7714.444444444444
+      },
+      {
+        "from_id": "KAL_SUP_01",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 6896.666666666665,
+        "large_trip_equivalents_per_year": 2298.8888888888887
+      },
+      {
+        "from_id": "KAL_SUP_02",
+        "to_id": "D_KAL_SUP_78",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 32200.0,
+        "large_trip_equivalents_per_year": 10733.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_04",
+        "to_id": "D_KAL_SUP_04",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 19946.666666666737,
+        "large_trip_equivalents_per_year": 6648.888888888912
+      },
+      {
+        "from_id": "KAL_SUP_04",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 5659.999999999921,
+        "large_trip_equivalents_per_year": 1886.6666666666404
+      },
+      {
+        "from_id": "KAL_SUP_04",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 7466.666666666678,
+        "large_trip_equivalents_per_year": 2488.8888888888923
+      },
+      {
+        "from_id": "KAL_SUP_05",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 706.6666666666966,
+        "large_trip_equivalents_per_year": 235.55555555556555
+      },
+      {
+        "from_id": "KAL_SUP_06",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29303.333333333332,
+        "large_trip_equivalents_per_year": 9767.777777777777
+      },
+      {
+        "from_id": "KAL_SUP_07",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 19599.999999999967,
+        "large_trip_equivalents_per_year": 6533.333333333322
+      },
+      {
+        "from_id": "KAL_SUP_07",
+        "to_id": "D_KAL_SUP_78",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 10086.666666666702,
+        "large_trip_equivalents_per_year": 3362.222222222234
+      },
+      {
+        "from_id": "KAL_SUP_08",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31333.333333333332,
+        "large_trip_equivalents_per_year": 10444.444444444445
+      },
+      {
+        "from_id": "KAL_SUP_09",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 8776.666666666666,
+        "large_trip_equivalents_per_year": 2925.5555555555557
+      },
+      {
+        "from_id": "KAL_SUP_10",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 33170.00000000001,
+        "large_trip_equivalents_per_year": 11056.666666666668
+      },
+      {
+        "from_id": "KAL_SUP_11",
+        "to_id": "D_KAL_SUP_11",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30719.999999999996,
+        "large_trip_equivalents_per_year": 10239.999999999998
+      },
+      {
+        "from_id": "KAL_SUP_12",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31266.666666666668,
+        "large_trip_equivalents_per_year": 10422.222222222223
+      },
+      {
+        "from_id": "KAL_SUP_13",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30936.666666666686,
+        "large_trip_equivalents_per_year": 10312.222222222228
+      },
+      {
+        "from_id": "KAL_SUP_14",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 9780.0,
+        "large_trip_equivalents_per_year": 3260.0
+      },
+      {
+        "from_id": "KAL_SUP_15",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29440.0,
+        "large_trip_equivalents_per_year": 9813.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_16",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 6703.333333333331,
+        "large_trip_equivalents_per_year": 2234.4444444444434
+      },
+      {
+        "from_id": "KAL_SUP_16",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 26046.66666666667,
+        "large_trip_equivalents_per_year": 8682.222222222224
+      },
+      {
+        "from_id": "KAL_SUP_17",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 6719.999999999994,
+        "large_trip_equivalents_per_year": 2239.999999999998
+      },
+      {
+        "from_id": "KAL_SUP_17",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 22703.33333333334,
+        "large_trip_equivalents_per_year": 7567.777777777779
+      },
+      {
+        "from_id": "KAL_SUP_18",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 7379.999999999952,
+        "large_trip_equivalents_per_year": 2459.9999999999836
+      },
+      {
+        "from_id": "KAL_SUP_18",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 23583.333333333383,
+        "large_trip_equivalents_per_year": 7861.111111111128
+      },
+      {
+        "from_id": "KAL_SUP_19",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 14526.666666666699,
+        "large_trip_equivalents_per_year": 4842.222222222233
+      },
+      {
+        "from_id": "KAL_SUP_19",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 13769.999999999995,
+        "large_trip_equivalents_per_year": 4589.999999999998
+      },
+      {
+        "from_id": "KAL_SUP_19",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 4939.999999999969,
+        "large_trip_equivalents_per_year": 1646.6666666666563
+      },
+      {
+        "from_id": "KAL_SUP_20",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 11366.666666666666,
+        "large_trip_equivalents_per_year": 3788.8888888888887
+      },
+      {
+        "from_id": "KAL_SUP_21",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30216.666666666668,
+        "large_trip_equivalents_per_year": 10072.222222222223
+      },
+      {
+        "from_id": "KAL_SUP_22",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29666.666666666668,
+        "large_trip_equivalents_per_year": 9888.888888888889
+      },
+      {
+        "from_id": "KAL_SUP_23",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30840.0,
+        "large_trip_equivalents_per_year": 10280.0
+      },
+      {
+        "from_id": "KAL_SUP_24",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 32173.333333333332,
+        "large_trip_equivalents_per_year": 10724.444444444445
+      },
+      {
+        "from_id": "KAL_SUP_25",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29333.333333333183,
+        "large_trip_equivalents_per_year": 9777.777777777728
+      },
+      {
+        "from_id": "KAL_SUP_27",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31083.33333333333,
+        "large_trip_equivalents_per_year": 10361.11111111111
+      },
+      {
+        "from_id": "KAL_SUP_28",
+        "to_id": "D_KAL_SUP_28",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29533.333333333332,
+        "large_trip_equivalents_per_year": 9844.444444444445
+      },
+      {
+        "from_id": "KAL_SUP_29",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29470.0,
+        "large_trip_equivalents_per_year": 9823.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_30",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 3356.6666666667447,
+        "large_trip_equivalents_per_year": 1118.888888888915
+      },
+      {
+        "from_id": "KAL_SUP_30",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29913.33333333326,
+        "large_trip_equivalents_per_year": 9971.111111111088
+      },
+      {
+        "from_id": "KAL_SUP_31",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 32216.666666666668,
+        "large_trip_equivalents_per_year": 10738.888888888889
+      },
+      {
+        "from_id": "KAL_SUP_32",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30680.0,
+        "large_trip_equivalents_per_year": 10226.666666666666
+      },
+      {
+        "from_id": "KAL_SUP_33",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 32230.0,
+        "large_trip_equivalents_per_year": 10743.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_34",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29280.0,
+        "large_trip_equivalents_per_year": 9760.0
+      },
+      {
+        "from_id": "KAL_SUP_35",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 33300.0,
+        "large_trip_equivalents_per_year": 11100.0
+      },
+      {
+        "from_id": "KAL_SUP_36",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30416.666666666668,
+        "large_trip_equivalents_per_year": 10138.888888888889
+      },
+      {
+        "from_id": "KAL_SUP_38",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 7873.333333333328,
+        "large_trip_equivalents_per_year": 2624.4444444444425
+      },
+      {
+        "from_id": "KAL_SUP_39",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31920.0,
+        "large_trip_equivalents_per_year": 10640.0
+      },
+      {
+        "from_id": "KAL_SUP_40",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 7613.333333333333,
+        "large_trip_equivalents_per_year": 2537.777777777778
+      },
+      {
+        "from_id": "KAL_SUP_41",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 10383.333333333321,
+        "large_trip_equivalents_per_year": 3461.111111111107
+      },
+      {
+        "from_id": "KAL_SUP_41",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 19976.66666666668,
+        "large_trip_equivalents_per_year": 6658.888888888893
+      },
+      {
+        "from_id": "KAL_SUP_42",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29586.666666666668,
+        "large_trip_equivalents_per_year": 9862.222222222223
+      },
+      {
+        "from_id": "KAL_SUP_43",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 11463.333333333283,
+        "large_trip_equivalents_per_year": 3821.111111111094
+      },
+      {
+        "from_id": "KAL_SUP_43",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 17856.66666666672,
+        "large_trip_equivalents_per_year": 5952.222222222239
+      },
+      {
+        "from_id": "KAL_SUP_44",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30623.333333333332,
+        "large_trip_equivalents_per_year": 10207.777777777777
+      },
+      {
+        "from_id": "KAL_SUP_45",
+        "to_id": "D_KAL_SUP_28",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 20466.666666666664,
+        "large_trip_equivalents_per_year": 6822.222222222222
+      },
+      {
+        "from_id": "KAL_SUP_45",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 11050.000000000013,
+        "large_trip_equivalents_per_year": 3683.3333333333376
+      },
+      {
+        "from_id": "KAL_SUP_46",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 32063.333333333387,
+        "large_trip_equivalents_per_year": 10687.777777777796
+      },
+      {
+        "from_id": "KAL_SUP_47",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29533.333333333332,
+        "large_trip_equivalents_per_year": 9844.444444444445
+      },
+      {
+        "from_id": "KAL_SUP_48",
+        "to_id": "D_KAL_SUP_23",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29473.333333333347,
+        "large_trip_equivalents_per_year": 9824.444444444449
+      },
+      {
+        "from_id": "KAL_SUP_48",
+        "to_id": "D_KAL_SUP_40",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 176.66666666665284,
+        "large_trip_equivalents_per_year": 58.88888888888428
+      },
+      {
+        "from_id": "KAL_SUP_49",
+        "to_id": "D_KAL_SUP_49",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31363.333333333332,
+        "large_trip_equivalents_per_year": 10454.444444444445
+      },
+      {
+        "from_id": "KAL_SUP_50",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30010.0,
+        "large_trip_equivalents_per_year": 10003.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_51",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31003.333333333332,
+        "large_trip_equivalents_per_year": 10334.444444444445
+      },
+      {
+        "from_id": "KAL_SUP_52",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30190.000000000004,
+        "large_trip_equivalents_per_year": 10063.333333333336
+      },
+      {
+        "from_id": "KAL_SUP_53",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30566.666666666668,
+        "large_trip_equivalents_per_year": 10188.888888888889
+      },
+      {
+        "from_id": "KAL_SUP_54",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30943.333333333332,
+        "large_trip_equivalents_per_year": 10314.444444444445
+      },
+      {
+        "from_id": "KAL_SUP_55",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29920.0,
+        "large_trip_equivalents_per_year": 9973.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_56",
+        "to_id": "D_KAL_SUP_54",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29823.333333333332,
+        "large_trip_equivalents_per_year": 9941.111111111111
+      },
+      {
+        "from_id": "KAL_SUP_57",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 8356.666666666666,
+        "large_trip_equivalents_per_year": 2785.5555555555557
+      },
+      {
+        "from_id": "KAL_SUP_58",
+        "to_id": "D_KAL_SUP_42",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 8293.333333333365,
+        "large_trip_equivalents_per_year": 2764.444444444455
+      },
+      {
+        "from_id": "KAL_SUP_61",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29920.0,
+        "large_trip_equivalents_per_year": 9973.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_62",
+        "to_id": "D_KAL_SUP_34",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 8836.666666666664,
+        "large_trip_equivalents_per_year": 2945.5555555555547
+      },
+      {
+        "from_id": "KAL_SUP_62",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 23180.0,
+        "large_trip_equivalents_per_year": 7726.666666666667
+      },
+      {
+        "from_id": "KAL_SUP_63",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 2513.3333333335345,
+        "large_trip_equivalents_per_year": 837.7777777778448
+      },
+      {
+        "from_id": "KAL_SUP_63",
+        "to_id": "D_KAL_SUP_53",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 28396.666666666468,
+        "large_trip_equivalents_per_year": 9465.55555555549
+      },
+      {
+        "from_id": "KAL_SUP_64",
+        "to_id": "D_KAL_SUP_64",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29800.0,
+        "large_trip_equivalents_per_year": 9933.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_65",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29366.666666666668,
+        "large_trip_equivalents_per_year": 9788.888888888889
+      },
+      {
+        "from_id": "KAL_SUP_66",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 32879.99999999999,
+        "large_trip_equivalents_per_year": 10959.999999999998
+      },
+      {
+        "from_id": "KAL_SUP_67",
+        "to_id": "D_KAL_SUP_67",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 29766.666666666668,
+        "large_trip_equivalents_per_year": 9922.222222222223
+      },
+      {
+        "from_id": "KAL_SUP_68",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 11980.0,
+        "large_trip_equivalents_per_year": 3993.3333333333335
+      },
+      {
+        "from_id": "KAL_SUP_69",
+        "to_id": "D_KAL_SUP_68",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 10330.0,
+        "large_trip_equivalents_per_year": 3443.3333333333335
+      },
+      {
+        "from_id": "KAL_SUP_70",
+        "to_id": "D_KAL_SUP_66",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 5750.000000000037,
+        "large_trip_equivalents_per_year": 1916.6666666666792
+      },
+      {
+        "from_id": "KAL_SUP_71",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31290.0,
+        "large_trip_equivalents_per_year": 10430.0
+      },
+      {
+        "from_id": "KAL_SUP_72",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 9753.333333333301,
+        "large_trip_equivalents_per_year": 3251.1111111111004
+      },
+      {
+        "from_id": "KAL_SUP_72",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 23386.6666666667,
+        "large_trip_equivalents_per_year": 7795.555555555567
+      },
+      {
+        "from_id": "KAL_SUP_73",
+        "to_id": "D_KAL_SUP_73",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 33010.0,
+        "large_trip_equivalents_per_year": 11003.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_74",
+        "to_id": "D_KAL_SUP_08",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 28476.66666666672,
+        "large_trip_equivalents_per_year": 9492.22222222224
+      },
+      {
+        "from_id": "KAL_SUP_74",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 4726.666666666612,
+        "large_trip_equivalents_per_year": 1575.5555555555375
+      },
+      {
+        "from_id": "KAL_SUP_75",
+        "to_id": "D_KAL_SUP_39",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 31290.0,
+        "large_trip_equivalents_per_year": 10430.0
+      },
+      {
+        "from_id": "KAL_SUP_76",
+        "to_id": "D_KAL_SUP_65",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 9263.333333333334,
+        "large_trip_equivalents_per_year": 3087.777777777778
+      },
+      {
+        "from_id": "KAL_SUP_77",
+        "to_id": "D_KAL_SUP_77",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 30440.0,
+        "large_trip_equivalents_per_year": 10146.666666666666
+      },
+      {
+        "from_id": "KAL_SUP_78",
+        "to_id": "D_KAL_SUP_78",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 32380.0,
+        "large_trip_equivalents_per_year": 10793.333333333334
+      },
+      {
+        "from_id": "KAL_SUP_79",
+        "to_id": "D_KAL_SUP_79",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 10849.999999999998,
+        "large_trip_equivalents_per_year": 3616.666666666666
+      },
+      {
+        "from_id": "D_KAL_SUP_04",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 3324.4444444444557,
+        "large_trip_equivalents_per_year": 1994.6666666666736
+      },
+      {
+        "from_id": "D_KAL_SUP_08",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 15276.111111111128,
+        "large_trip_equivalents_per_year": 9165.666666666677
+      },
+      {
+        "from_id": "D_KAL_SUP_10",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_11",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 5120.0,
+        "large_trip_equivalents_per_year": 3072.0
+      },
+      {
+        "from_id": "D_KAL_SUP_23",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_28",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 8333.333333333334,
+        "large_trip_equivalents_per_year": 5000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_34",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_39",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 11779.444444444429,
+        "large_trip_equivalents_per_year": 7067.666666666657
+      },
+      {
+        "from_id": "D_KAL_SUP_39",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 4887.222222222237,
+        "large_trip_equivalents_per_year": 2932.3333333333426
+      },
+      {
+        "from_id": "D_KAL_SUP_40",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.66666666665,
+        "large_trip_equivalents_per_year": 9999.99999999999
+      },
+      {
+        "from_id": "D_KAL_SUP_42",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_44",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.66666666666,
+        "large_trip_equivalents_per_year": 9999.999999999996
+      },
+      {
+        "from_id": "D_KAL_SUP_49",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_53",
+        "to_id": "R_KAL_SUP_34",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666657,
+        "large_trip_equivalents_per_year": 9999.999999999995
+      },
+      {
+        "from_id": "D_KAL_SUP_54",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_64",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_65",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 2055.555555555568,
+        "large_trip_equivalents_per_year": 1233.3333333333408
+      },
+      {
+        "from_id": "D_KAL_SUP_65",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 14611.111111111099,
+        "large_trip_equivalents_per_year": 8766.666666666659
+      },
+      {
+        "from_id": "D_KAL_SUP_66",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 6277.777777777762,
+        "large_trip_equivalents_per_year": 3766.666666666657
+      },
+      {
+        "from_id": "D_KAL_SUP_66",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 10388.888888888896,
+        "large_trip_equivalents_per_year": 6233.333333333338
+      },
+      {
+        "from_id": "D_KAL_SUP_67",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.66666666666,
+        "large_trip_equivalents_per_year": 9999.999999999996
+      },
+      {
+        "from_id": "D_KAL_SUP_68",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_73",
+        "to_id": "R_KAL_SUP_42",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 5501.666666666659,
+        "large_trip_equivalents_per_year": 3300.999999999995
+      },
+      {
+        "from_id": "D_KAL_SUP_77",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "D_KAL_SUP_78",
+        "to_id": "R_KAL_SUP_49",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 12444.44444444445,
+        "large_trip_equivalents_per_year": 7466.666666666671
+      },
+      {
+        "from_id": "D_KAL_SUP_79",
+        "to_id": "R_KAL_SUP_67",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
+      },
+      {
+        "from_id": "R_KAL_SUP_34",
+        "to_id": "PNK",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 13587.5,
+        "large_trip_equivalents_per_year": 6793.75
+      },
+      {
+        "from_id": "R_KAL_SUP_42",
+        "to_id": "PNK",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 5162.5,
+        "large_trip_equivalents_per_year": 2581.25
+      },
+      {
+        "from_id": "R_KAL_SUP_67",
+        "to_id": "PKN",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 5162.5,
+        "large_trip_equivalents_per_year": 2581.25
+      },
+      {
+        "from_id": "R_KAL_SUP_49",
+        "to_id": "PKN",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 13587.5,
+        "large_trip_equivalents_per_year": 6793.75
+      },
+      {
+        "from_id": "R_KAL_SUP_77",
+        "to_id": "BPN",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 7062.499999999998,
+        "large_trip_equivalents_per_year": 3531.249999999999
+      },
+      {
+        "from_id": "R_KAL_SUP_54",
+        "to_id": "BPN",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 11687.50000000001,
+        "large_trip_equivalents_per_year": 5843.750000000005
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "checks": [
+      {
+        "name": "status",
+        "passed": true,
+        "detail": "Only a solution with flows is valid."
+      },
+      {
+        "name": "scenario",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "unique_facilities",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_01', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_01', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_01', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_01', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_02', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_02', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_04', 'D_KAL_SUP_04', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_04', 'D_KAL_SUP_04', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_04', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_04', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_04', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_04', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_05', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_05', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_06', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_06', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_07', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_07', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_07', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_07', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_08', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_08', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_09', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_09', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_10', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_10', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_11', 'D_KAL_SUP_11', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_11', 'D_KAL_SUP_11', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_12', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_12', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_13', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_13', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_14', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_14', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_15', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_15', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_16', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_16', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_16', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_16', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_17', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_17', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_17', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_17', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_18', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_18', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_18', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_18', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_19', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_19', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_19', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_19', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_19', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_19', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_20', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_20', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_21', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_21', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_22', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_22', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_23', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_23', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_24', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_24', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_25', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_25', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_27', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_27', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_28', 'D_KAL_SUP_28', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_28', 'D_KAL_SUP_28', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_29', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_29', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_30', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_30', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_30', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_30', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_31', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_31', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_32', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_32', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_33', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_33', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_34', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_34', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_35', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_35', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_36', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_36', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_38', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_38', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_39', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_39', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_40', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_40', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_41', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_41', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_41', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_41', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_42', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_42', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_43', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_43', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_43', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_43', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_44', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_44', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_45', 'D_KAL_SUP_28', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_45', 'D_KAL_SUP_28', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_45', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_45', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_46', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_46', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_47', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_47', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_48', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_48', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_48', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_48', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_49', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_49', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_50', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_50', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_51', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_51', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_52', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_52', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_53', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_53', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_54', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_54', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_55', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_55', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_56', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_56', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_57', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_57', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_58', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_58', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_61', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_61', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_62', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_62', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_62', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_62', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_63', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_63', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_63', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_63', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_64', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_64', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_65', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_65', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_66', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_66', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_67', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_67', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_68', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_68', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_69', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_69', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_70', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_70', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_71', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_71', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_72', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_72', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_72', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_72', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_73', 'D_KAL_SUP_73', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_73', 'D_KAL_SUP_73', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_74', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_74', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_74', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_74', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_75', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_75', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_76', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_76', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_77', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_77', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_78', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_78', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_79', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_79', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_04', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_04', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_08', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_08', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_10', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_10', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_11', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_11', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_23', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_23', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_28', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_28', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_34', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_34', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_39', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_39', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_39', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_39', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_40', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_40', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_42', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_42', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_44', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_44', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_49', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_49', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_53', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_53', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_54', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_54', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_64', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_64', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_65', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_65', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_65', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_65', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_66', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_66', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_66', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_66', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_67', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_67', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_68', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_68', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_73', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_73', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_77', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_77', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_78', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_78', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_79', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_79', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_34', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_34', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_42', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_42', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_42', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_42', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_67', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_67', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_67', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_67', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_49', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_49', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_77', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_77', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_54', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_54', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R_KAL_SUP_54', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R_KAL_SUP_54', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_01",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_02",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_03",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_04",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_05",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_06",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_07",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_08",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_09",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_10",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_11",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_12",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_13",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_14",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_15",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_16",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_17",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_18",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_19",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_20",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_21",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_22",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_23",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_24",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_25",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_26",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_27",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_28",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_29",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_30",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_31",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_32",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_33",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_35",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_36",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_37",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_38",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_39",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_40",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_41",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_43",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_44",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_45",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_46",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_47",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_48",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_50",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_51",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_52",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_53",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_55",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_56",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_57",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_58",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_59",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_60",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_61",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_62",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_63",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_64",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_65",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_66",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_68",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_69",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_70",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_71",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_72",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_73",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_74",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_75",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_76",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_78",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_79",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply KAL_SUP_80",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_01",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_02",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_03",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_04",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_04",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_04",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_04",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_04",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_05",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_06",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_07",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_08",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_08",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_08",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_08",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_08",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_09",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_10",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_10",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_10",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_10",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_10",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_11",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_11",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_11",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_11",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_11",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_12",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_13",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_14",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_15",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_16",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_17",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_18",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_19",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_20",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_21",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_22",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_23",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_23",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_23",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_23",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_23",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_24",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_25",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_26",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_27",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_28",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_28",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_28",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_28",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_28",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_29",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_30",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_31",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_32",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_33",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_35",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_36",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_37",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_38",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_39",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_39",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_39",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_39",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_39",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_40",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_40",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_40",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_40",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_40",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_41",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_43",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_44",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_44",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_44",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_44",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_44",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_45",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_46",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_47",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_48",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_50",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_51",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_52",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_53",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_53",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_53",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_53",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_53",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_55",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_56",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_57",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_58",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_59",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_60",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_61",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_62",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_63",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_64",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_64",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_64",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_64",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_64",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_65",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_65",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_65",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_65",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_65",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_66",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_66",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_66",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_66",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_66",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_68",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_68",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_68",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_68",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_68",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_69",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_70",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_71",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_72",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_73",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_73",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_73",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_73",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_73",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_74",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_75",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_76",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_78",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_78",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_78",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_78",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_78",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D_KAL_SUP_79",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_79",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_79",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_79",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_79",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed D_KAL_SUP_80",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind R_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity R_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance R_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake R_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output R_KAL_SUP_34",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind R_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity R_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance R_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake R_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output R_KAL_SUP_42",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind R_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity R_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance R_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake R_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output R_KAL_SUP_67",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind R_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity R_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance R_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake R_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output R_KAL_SUP_49",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind R_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity R_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance R_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake R_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output R_KAL_SUP_77",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind R_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity R_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance R_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake R_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output R_KAL_SUP_54",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed R_KAL_SUP_70",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "closed R_KAL_SUP_18",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "known facilities",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand PNK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery PNK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand PKN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery PKN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand BPN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery BPN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand TRK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery TRK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost capex_usd",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost annualised_capex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost fixed_opex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost variable_opex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost opex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost transport_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost total_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck coverage",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_01', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_01', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_02', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_04', 'D_KAL_SUP_04', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_04', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_04', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_05', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_06', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_07', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_07', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_08', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_09', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_10', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_11', 'D_KAL_SUP_11', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_12', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_13', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_14', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_15', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_16', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_16', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_17', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_17', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_18', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_18', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_19', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_19', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_19', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_20', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_21', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_22', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_23', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_24', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_25', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_27', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_28', 'D_KAL_SUP_28', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_29', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_30', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_30', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_31', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_32', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_33', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_34', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_35', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_36', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_38', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_39', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_40', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_41', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_41', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_42', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_43', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_43', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_44', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_45', 'D_KAL_SUP_28', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_45', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_46', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_47', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_48', 'D_KAL_SUP_23', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_48', 'D_KAL_SUP_40', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_49', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_50', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_51', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_52', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_53', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_54', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_55', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_56', 'D_KAL_SUP_54', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_57', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_58', 'D_KAL_SUP_42', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_61', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_62', 'D_KAL_SUP_34', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_62', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_63', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_63', 'D_KAL_SUP_53', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_64', 'D_KAL_SUP_64', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_65', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_66', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_67', 'D_KAL_SUP_67', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_68', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_69', 'D_KAL_SUP_68', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_70', 'D_KAL_SUP_66', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_71', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_72', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_72', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_73', 'D_KAL_SUP_73', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_74', 'D_KAL_SUP_08', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_74', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_75', 'D_KAL_SUP_39', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_76', 'D_KAL_SUP_65', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_77', 'D_KAL_SUP_77', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_78', 'D_KAL_SUP_78', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_79', 'D_KAL_SUP_79', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_04', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_08', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_10', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_11', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_23', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_28', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_34', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_39', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_39', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_40', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_42', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_44', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_49', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_53', 'R_KAL_SUP_34', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_54', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_64', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_65', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_65', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_66', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_66', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_67', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_68', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_73', 'R_KAL_SUP_42', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_77', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_78', 'R_KAL_SUP_49', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_79', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R_KAL_SUP_34', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R_KAL_SUP_42', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R_KAL_SUP_67', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R_KAL_SUP_49', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R_KAL_SUP_77', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R_KAL_SUP_54', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      }
+    ],
+    "errors": []
+  }
+}
