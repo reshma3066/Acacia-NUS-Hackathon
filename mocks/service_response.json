@@ -1,0 +1,397 @@
+{
+  "scenario": {
+    "schema_version": "2.0",
+    "scenario_id": "fixture-v2.0",
+    "assumptions_status": "SYNTHETIC_INTERFACE_FIXTURE",
+    "period_years": 1,
+    "demand_t_per_year": {
+      "PNK": 25,
+      "PKN": 25,
+      "BPN": 25,
+      "TRK": 25
+    },
+    "depot_yield": 1.0,
+    "refinery_yield": 0.2,
+    "use_all_supply": false,
+    "distance_method": "fixture_effective_km",
+    "distance_multiplier": 1.3,
+    "annualisation_years": 20,
+    "discount_rate": 0.0,
+    "transport_usd_per_t_km": {
+      "source_depot": 0.1,
+      "depot_refinery": 0.12,
+      "refinery_airport": 0.08
+    },
+    "solver_time_limit_s": 30,
+    "solver_rel_gap": 0.01
+  },
+  "result": {
+    "schema_version": "2.0",
+    "scenario_id": "fixture-v2.0",
+    "provenance": "mock",
+    "status": "feasible",
+    "runtime_s": 0.0,
+    "mip_gap": null,
+    "message": "Synthetic interface fixture; not a computed optimum.",
+    "facilities": [
+      {
+        "candidate_id": "D1",
+        "kind": "depot",
+        "size": "small",
+        "input_t_per_year": 500,
+        "output_t_per_year": 500
+      },
+      {
+        "candidate_id": "R1",
+        "kind": "refinery",
+        "size": "small",
+        "input_t_per_year": 500,
+        "output_t_per_year": 100
+      }
+    ],
+    "flows": [
+      {
+        "from_id": "S1",
+        "to_id": "D1",
+        "stage": "source_depot",
+        "tonnes_per_year": 500,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D1",
+        "to_id": "R1",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 500,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R1",
+        "to_id": "PNK",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 25,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R1",
+        "to_id": "PKN",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 25,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R1",
+        "to_id": "BPN",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 25,
+        "mode": "truck"
+      },
+      {
+        "from_id": "R1",
+        "to_id": "TRK",
+        "stage": "refinery_airport",
+        "tonnes_per_year": 25,
+        "mode": "barge"
+      }
+    ],
+    "deliveries_t_per_year": {
+      "PNK": 25,
+      "PKN": 25,
+      "BPN": 25,
+      "TRK": 25
+    },
+    "costs": {
+      "capex_usd": 482250000,
+      "annualised_capex_usd_per_year": 24112500,
+      "opex_usd_per_year": 24145000,
+      "transport_usd_per_year": 800,
+      "total_usd_per_year": 48258300,
+      "fixed_opex_usd_per_year": 24112500,
+      "variable_opex_usd_per_year": 32500
+    },
+    "truck_trips": [
+      {
+        "from_id": "S1",
+        "to_id": "D1",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 166.66666666666666,
+        "large_trip_equivalents_per_year": 55.55555555555556
+      },
+      {
+        "from_id": "D1",
+        "to_id": "R1",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 27.77777777777778,
+        "large_trip_equivalents_per_year": 16.666666666666668
+      },
+      {
+        "from_id": "R1",
+        "to_id": "PNK",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 1.5625,
+        "large_trip_equivalents_per_year": 0.78125
+      },
+      {
+        "from_id": "R1",
+        "to_id": "PKN",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 1.5625,
+        "large_trip_equivalents_per_year": 0.78125
+      },
+      {
+        "from_id": "R1",
+        "to_id": "BPN",
+        "stage": "refinery_airport",
+        "small_trip_equivalents_per_year": 1.5625,
+        "large_trip_equivalents_per_year": 0.78125
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "checks": [
+      {
+        "name": "status",
+        "passed": true,
+        "detail": "Only a solution with flows is valid."
+      },
+      {
+        "name": "scenario",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "unique_facilities",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('S1', 'D1', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('S1', 'D1', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D1', 'R1', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D1', 'R1', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R1', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R1', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R1', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R1', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R1', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R1', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('R1', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('R1', 'TRK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "supply S1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind D1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "kind R1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity R1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance R1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake R1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output R1",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "known facilities",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand PNK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery PNK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand PKN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery PKN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand BPN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery BPN",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "demand TRK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported delivery TRK",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost capex_usd",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost annualised_capex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost fixed_opex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost variable_opex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost opex_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost transport_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "cost total_usd_per_year",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck coverage",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('S1', 'D1', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D1', 'R1', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R1', 'PNK', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R1', 'PKN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('R1', 'BPN', 'refinery_airport')",
+        "passed": true,
+        "detail": ""
+      }
+    ],
+    "errors": []
+  },
+  "explanation": "Synthetic fixture: 100 t SAF/year; annual cost USD 48,258,300.",
+  "clarification": null
+}

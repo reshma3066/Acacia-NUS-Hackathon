@@ -1,0 +1,7 @@
+from_id,to_id,stage,distance_km
+S1,D1,source_depot,0.0
+D1,R1,depot_refinery,0.0
+R1,PNK,refinery_airport,100.0
+R1,PKN,refinery_airport,100.0
+R1,BPN,refinery_airport,100.0
+R1,TRK,refinery_airport,100.0

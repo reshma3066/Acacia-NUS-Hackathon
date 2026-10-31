@@ -1,0 +1,30 @@
+{
+  "depot": {
+    "small": {
+      "capex_usd": 2250000,
+      "capacity_t_per_year": 150000,
+      "fixed_opex_usd_per_year": 112500.0,
+      "variable_opex_usd_per_tonne_in": 5
+    },
+    "large": {
+      "capex_usd": 4500000,
+      "capacity_t_per_year": 300000,
+      "fixed_opex_usd_per_year": 225000.0,
+      "variable_opex_usd_per_tonne_in": 4
+    }
+  },
+  "refinery": {
+    "small": {
+      "capex_usd": 480000000,
+      "capacity_t_per_year": 500000,
+      "fixed_opex_usd_per_year": 24000000.0,
+      "variable_opex_usd_per_tonne_in": 60
+    },
+    "large": {
+      "capex_usd": 765000000,
+      "capacity_t_per_year": 1087000,
+      "fixed_opex_usd_per_year": 38250000.0,
+      "variable_opex_usd_per_tonne_in": 55
+    }
+  }
+}

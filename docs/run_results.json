@@ -1,0 +1,94 @@
+[
+  {
+    "scenario": "full-base-v2.0",
+    "method": "baseline",
+    "status": "optimal",
+    "runtime_s": 0.02291092999985267,
+    "mip_gap": 0.0,
+    "valid": true,
+    "costs": {
+      "capex_usd": 6300000000.0,
+      "annualised_capex_usd_per_year": 315000000.0,
+      "fixed_opex_usd_per_year": 315000000.0,
+      "variable_opex_usd_per_year": 360000000.0,
+      "opex_usd_per_year": 675000000.0,
+      "transport_usd_per_year": 123867184.07394612,
+      "total_usd_per_year": 1113867184.073946
+    },
+    "facilities": 88
+  },
+  {
+    "scenario": "full-base-v2.0",
+    "method": "milp",
+    "status": "feasible",
+    "runtime_s": 12.03181240999993,
+    "mip_gap": 0.009809301871540452,
+    "valid": true,
+    "costs": {
+      "capex_usd": 4684500000.0,
+      "annualised_capex_usd_per_year": 234225000.0,
+      "fixed_opex_usd_per_year": 234225000.0,
+      "variable_opex_usd_per_year": 354401030.0,
+      "opex_usd_per_year": 588626030.0,
+      "transport_usd_per_year": 123775311.34859325,
+      "total_usd_per_year": 946626341.3485932
+    },
+    "facilities": 29
+  },
+  {
+    "scenario": "full-bpn20-v2.0",
+    "method": "baseline",
+    "status": "optimal",
+    "runtime_s": 0.03026693900005739,
+    "mip_gap": 0.0,
+    "valid": true,
+    "costs": {
+      "capex_usd": 6300000000.0,
+      "annualised_capex_usd_per_year": 315000000.0,
+      "fixed_opex_usd_per_year": 315000000.0,
+      "variable_opex_usd_per_year": 378000000.0,
+      "opex_usd_per_year": 693000000.0,
+      "transport_usd_per_year": 142419177.46393043,
+      "total_usd_per_year": 1150419177.4639304
+    },
+    "facilities": 88
+  },
+  {
+    "scenario": "full-bpn20-v2.0",
+    "method": "milp",
+    "status": "feasible",
+    "runtime_s": 16.005897946000005,
+    "mip_gap": 0.00018358176828425004,
+    "valid": true,
+    "costs": {
+      "capex_usd": 4689000000.0,
+      "annualised_capex_usd_per_year": 234450000.0,
+      "fixed_opex_usd_per_year": 234450000.0,
+      "variable_opex_usd_per_year": 371949029.99999994,
+      "opex_usd_per_year": 606399030.0,
+      "transport_usd_per_year": 141304218.0773582,
+      "total_usd_per_year": 982153248.0773582
+    },
+    "facilities": 29
+  },
+  {
+    "scenario": "full-infeasible-v2.0",
+    "method": "baseline",
+    "status": "infeasible",
+    "runtime_s": 0.0002212509998571477,
+    "mip_gap": null,
+    "valid": false,
+    "costs": {},
+    "facilities": 0
+  },
+  {
+    "scenario": "full-infeasible-v2.0",
+    "method": "milp",
+    "status": "infeasible",
+    "runtime_s": 2.155699985451065e-05,
+    "mip_gap": null,
+    "valid": false,
+    "costs": {},
+    "facilities": 0
+  }
+]
