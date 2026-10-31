@@ -30,23 +30,16 @@
     "scenario_id": "full-base-v2.0",
     "provenance": "solver",
     "status": "feasible",
-    "runtime_s": 12.03181240999993,
-    "mip_gap": 0.009809301871540452,
+    "runtime_s": 5.196913200000154,
+    "mip_gap": 0.008500704205635349,
     "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal) Candidate-set result; inspect mip_gap.",
     "facilities": [
-      {
-        "candidate_id": "D_KAL_SUP_04",
-        "kind": "depot",
-        "size": "small",
-        "input_t_per_year": 59840.000000000204,
-        "output_t_per_year": 59840.000000000204
-      },
       {
         "candidate_id": "D_KAL_SUP_08",
         "kind": "depot",
         "size": "large",
-        "input_t_per_year": 274970.0000000006,
-        "output_t_per_year": 274970.0000000006
+        "input_t_per_year": 274970.0,
+        "output_t_per_year": 274970.0
       },
       {
         "candidate_id": "D_KAL_SUP_10",
@@ -59,15 +52,15 @@
         "candidate_id": "D_KAL_SUP_11",
         "kind": "depot",
         "size": "small",
-        "input_t_per_year": 92160.0,
-        "output_t_per_year": 92160.0
+        "input_t_per_year": 150000.0,
+        "output_t_per_year": 150000.0
       },
       {
         "candidate_id": "D_KAL_SUP_23",
         "kind": "depot",
         "size": "large",
-        "input_t_per_year": 300000.0,
-        "output_t_per_year": 300000.0
+        "input_t_per_year": 299999.99999999994,
+        "output_t_per_year": 299999.99999999994
       },
       {
         "candidate_id": "D_KAL_SUP_28",
@@ -75,6 +68,13 @@
         "size": "small",
         "input_t_per_year": 150000.0,
         "output_t_per_year": 150000.0
+      },
+      {
+        "candidate_id": "D_KAL_SUP_30",
+        "kind": "depot",
+        "size": "large",
+        "input_t_per_year": 300000.0,
+        "output_t_per_year": 300000.0
       },
       {
         "candidate_id": "D_KAL_SUP_34",
@@ -147,13 +147,6 @@
         "output_t_per_year": 300000.0
       },
       {
-        "candidate_id": "D_KAL_SUP_66",
-        "kind": "depot",
-        "size": "large",
-        "input_t_per_year": 300000.0,
-        "output_t_per_year": 300000.0
-      },
-      {
         "candidate_id": "D_KAL_SUP_67",
         "kind": "depot",
         "size": "large",
@@ -164,15 +157,15 @@
         "candidate_id": "D_KAL_SUP_68",
         "kind": "depot",
         "size": "large",
-        "input_t_per_year": 300000.0,
-        "output_t_per_year": 300000.0
+        "input_t_per_year": 299999.9999999982,
+        "output_t_per_year": 299999.9999999982
       },
       {
         "candidate_id": "D_KAL_SUP_73",
         "kind": "depot",
         "size": "small",
-        "input_t_per_year": 99029.99999999985,
-        "output_t_per_year": 99029.99999999985
+        "input_t_per_year": 99030.0,
+        "output_t_per_year": 99030.0
       },
       {
         "candidate_id": "D_KAL_SUP_77",
@@ -185,8 +178,8 @@
         "candidate_id": "D_KAL_SUP_78",
         "kind": "depot",
         "size": "large",
-        "input_t_per_year": 224000.00000000012,
-        "output_t_per_year": 224000.00000000012
+        "input_t_per_year": 225999.99999999919,
+        "output_t_per_year": 225999.99999999919
       },
       {
         "candidate_id": "D_KAL_SUP_79",
@@ -243,14 +236,14 @@
         "from_id": "KAL_SUP_01",
         "to_id": "D_KAL_SUP_49",
         "stage": "source_depot",
-        "tonnes_per_year": 69430.0,
+        "tonnes_per_year": 69429.99999999716,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_01",
         "to_id": "D_KAL_SUP_68",
         "stage": "source_depot",
-        "tonnes_per_year": 20689.999999999996,
+        "tonnes_per_year": 20690.00000000284,
         "mode": "truck"
       },
       {
@@ -262,30 +255,23 @@
       },
       {
         "from_id": "KAL_SUP_04",
-        "to_id": "D_KAL_SUP_04",
-        "stage": "source_depot",
-        "tonnes_per_year": 59840.00000000021,
-        "mode": "truck"
-      },
-      {
-        "from_id": "KAL_SUP_04",
         "to_id": "D_KAL_SUP_54",
         "stage": "source_depot",
-        "tonnes_per_year": 16979.999999999764,
+        "tonnes_per_year": 76819.99999999999,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_04",
         "to_id": "D_KAL_SUP_77",
         "stage": "source_depot",
-        "tonnes_per_year": 22400.000000000033,
+        "tonnes_per_year": 22400.00000000002,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_05",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "tonnes_per_year": 2120.00000000009,
+        "tonnes_per_year": 4120.000000000744,
         "mode": "truck"
       },
       {
@@ -299,14 +285,14 @@
         "from_id": "KAL_SUP_07",
         "to_id": "D_KAL_SUP_49",
         "stage": "source_depot",
-        "tonnes_per_year": 58799.9999999999,
+        "tonnes_per_year": 56800.0000000016,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_07",
         "to_id": "D_KAL_SUP_78",
         "stage": "source_depot",
-        "tonnes_per_year": 30260.000000000106,
+        "tonnes_per_year": 32259.9999999984,
         "mode": "truck"
       },
       {
@@ -327,35 +313,42 @@
         "from_id": "KAL_SUP_10",
         "to_id": "D_KAL_SUP_10",
         "stage": "source_depot",
-        "tonnes_per_year": 99510.00000000001,
+        "tonnes_per_year": 99510.0,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_11",
         "to_id": "D_KAL_SUP_11",
         "stage": "source_depot",
-        "tonnes_per_year": 92159.99999999999,
+        "tonnes_per_year": 92159.99999999997,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_12",
         "to_id": "D_KAL_SUP_64",
         "stage": "source_depot",
-        "tonnes_per_year": 93800.0,
+        "tonnes_per_year": 93800.00000000004,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_13",
+        "to_id": "D_KAL_SUP_30",
+        "stage": "source_depot",
+        "tonnes_per_year": 2559.9999999999523,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_13",
         "to_id": "D_KAL_SUP_44",
         "stage": "source_depot",
-        "tonnes_per_year": 92810.00000000006,
+        "tonnes_per_year": 90250.0000000001,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_14",
         "to_id": "D_KAL_SUP_68",
         "stage": "source_depot",
-        "tonnes_per_year": 29340.0,
+        "tonnes_per_year": 29340.000000000004,
         "mode": "truck"
       },
       {
@@ -369,63 +362,49 @@
         "from_id": "KAL_SUP_16",
         "to_id": "D_KAL_SUP_64",
         "stage": "source_depot",
-        "tonnes_per_year": 20109.999999999993,
+        "tonnes_per_year": 20109.999999999956,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_16",
         "to_id": "D_KAL_SUP_67",
         "stage": "source_depot",
-        "tonnes_per_year": 78140.00000000001,
-        "mode": "truck"
-      },
-      {
-        "from_id": "KAL_SUP_17",
-        "to_id": "D_KAL_SUP_10",
-        "stage": "source_depot",
-        "tonnes_per_year": 20159.99999999998,
+        "tonnes_per_year": 78140.00000000004,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_17",
         "to_id": "D_KAL_SUP_44",
         "stage": "source_depot",
-        "tonnes_per_year": 68110.00000000001,
+        "tonnes_per_year": 88270.00000000004,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_18",
-        "to_id": "D_KAL_SUP_44",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "tonnes_per_year": 22139.999999999854,
-        "mode": "truck"
-      },
-      {
-        "from_id": "KAL_SUP_18",
-        "to_id": "D_KAL_SUP_66",
-        "stage": "source_depot",
-        "tonnes_per_year": 70750.00000000015,
+        "tonnes_per_year": 92890.0,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_19",
         "to_id": "D_KAL_SUP_49",
         "stage": "source_depot",
-        "tonnes_per_year": 43580.000000000095,
+        "tonnes_per_year": 45580.00000000124,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_19",
         "to_id": "D_KAL_SUP_67",
         "stage": "source_depot",
-        "tonnes_per_year": 41309.999999999985,
+        "tonnes_per_year": 41309.99999999985,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_19",
         "to_id": "D_KAL_SUP_79",
         "stage": "source_depot",
-        "tonnes_per_year": 14819.999999999907,
+        "tonnes_per_year": 12819.999999998912,
         "mode": "truck"
       },
       {
@@ -437,9 +416,16 @@
       },
       {
         "from_id": "KAL_SUP_21",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "tonnes_per_year": 49770.00000000043,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_21",
         "to_id": "D_KAL_SUP_54",
         "stage": "source_depot",
-        "tonnes_per_year": 90650.0,
+        "tonnes_per_year": 40879.99999999964,
         "mode": "truck"
       },
       {
@@ -467,14 +453,14 @@
         "from_id": "KAL_SUP_25",
         "to_id": "D_KAL_SUP_08",
         "stage": "source_depot",
-        "tonnes_per_year": 87999.99999999955,
+        "tonnes_per_year": 88000.0,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_27",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "tonnes_per_year": 93249.99999999999,
+        "tonnes_per_year": 93250.0,
         "mode": "truck"
       },
       {
@@ -493,16 +479,9 @@
       },
       {
         "from_id": "KAL_SUP_30",
-        "to_id": "D_KAL_SUP_54",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "tonnes_per_year": 10070.000000000235,
-        "mode": "truck"
-      },
-      {
-        "from_id": "KAL_SUP_30",
-        "to_id": "D_KAL_SUP_66",
-        "stage": "source_depot",
-        "tonnes_per_year": 89739.99999999978,
+        "tonnes_per_year": 99810.00000000001,
         "mode": "truck"
       },
       {
@@ -549,9 +528,9 @@
       },
       {
         "from_id": "KAL_SUP_38",
-        "to_id": "D_KAL_SUP_66",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "tonnes_per_year": 23619.99999999998,
+        "tonnes_per_year": 23619.999999999993,
         "mode": "truck"
       },
       {
@@ -572,14 +551,14 @@
         "from_id": "KAL_SUP_41",
         "to_id": "D_KAL_SUP_23",
         "stage": "source_depot",
-        "tonnes_per_year": 31149.999999999964,
+        "tonnes_per_year": 31149.999999999935,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_41",
         "to_id": "D_KAL_SUP_42",
         "stage": "source_depot",
-        "tonnes_per_year": 59930.00000000004,
+        "tonnes_per_year": 59930.000000000065,
         "mode": "truck"
       },
       {
@@ -593,14 +572,14 @@
         "from_id": "KAL_SUP_43",
         "to_id": "D_KAL_SUP_42",
         "stage": "source_depot",
-        "tonnes_per_year": 34389.99999999985,
+        "tonnes_per_year": 34389.99999999997,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_43",
         "to_id": "D_KAL_SUP_53",
         "stage": "source_depot",
-        "tonnes_per_year": 53570.00000000015,
+        "tonnes_per_year": 53570.00000000002,
         "mode": "truck"
       },
       {
@@ -614,21 +593,21 @@
         "from_id": "KAL_SUP_45",
         "to_id": "D_KAL_SUP_28",
         "stage": "source_depot",
-        "tonnes_per_year": 61399.99999999999,
+        "tonnes_per_year": 61399.99999999962,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_45",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "tonnes_per_year": 33150.00000000004,
+        "tonnes_per_year": 33150.0000000004,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_46",
         "to_id": "D_KAL_SUP_39",
         "stage": "source_depot",
-        "tonnes_per_year": 96190.00000000016,
+        "tonnes_per_year": 96190.0,
         "mode": "truck"
       },
       {
@@ -642,14 +621,14 @@
         "from_id": "KAL_SUP_48",
         "to_id": "D_KAL_SUP_23",
         "stage": "source_depot",
-        "tonnes_per_year": 88420.00000000004,
+        "tonnes_per_year": 88420.0,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_48",
         "to_id": "D_KAL_SUP_40",
         "stage": "source_depot",
-        "tonnes_per_year": 529.9999999999585,
+        "tonnes_per_year": 530.0000000000011,
         "mode": "truck"
       },
       {
@@ -677,7 +656,7 @@
         "from_id": "KAL_SUP_52",
         "to_id": "D_KAL_SUP_10",
         "stage": "source_depot",
-        "tonnes_per_year": 90570.00000000001,
+        "tonnes_per_year": 90569.99999999956,
         "mode": "truck"
       },
       {
@@ -698,7 +677,14 @@
         "from_id": "KAL_SUP_55",
         "to_id": "D_KAL_SUP_10",
         "stage": "source_depot",
-        "tonnes_per_year": 89760.0,
+        "tonnes_per_year": 60150.00000000005,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_55",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "tonnes_per_year": 29609.999999999927,
         "mode": "truck"
       },
       {
@@ -710,7 +696,7 @@
       },
       {
         "from_id": "KAL_SUP_57",
-        "to_id": "D_KAL_SUP_44",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
         "tonnes_per_year": 25070.0,
         "mode": "truck"
@@ -719,7 +705,7 @@
         "from_id": "KAL_SUP_58",
         "to_id": "D_KAL_SUP_42",
         "stage": "source_depot",
-        "tonnes_per_year": 24880.000000000095,
+        "tonnes_per_year": 24879.999999999953,
         "mode": "truck"
       },
       {
@@ -740,21 +726,21 @@
         "from_id": "KAL_SUP_62",
         "to_id": "D_KAL_SUP_53",
         "stage": "source_depot",
-        "tonnes_per_year": 69540.0,
+        "tonnes_per_year": 69540.00000000001,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_63",
         "to_id": "D_KAL_SUP_08",
         "stage": "source_depot",
-        "tonnes_per_year": 7540.000000000603,
+        "tonnes_per_year": 7540.000000000035,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_63",
         "to_id": "D_KAL_SUP_53",
         "stage": "source_depot",
-        "tonnes_per_year": 85189.9999999994,
+        "tonnes_per_year": 85189.99999999997,
         "mode": "truck"
       },
       {
@@ -773,9 +759,16 @@
       },
       {
         "from_id": "KAL_SUP_66",
-        "to_id": "D_KAL_SUP_66",
+        "to_id": "D_KAL_SUP_11",
         "stage": "source_depot",
-        "tonnes_per_year": 98639.99999999999,
+        "tonnes_per_year": 57839.99999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "KAL_SUP_66",
+        "to_id": "D_KAL_SUP_30",
+        "stage": "source_depot",
+        "tonnes_per_year": 40800.000000000044,
         "mode": "truck"
       },
       {
@@ -796,14 +789,14 @@
         "from_id": "KAL_SUP_69",
         "to_id": "D_KAL_SUP_68",
         "stage": "source_depot",
-        "tonnes_per_year": 30990.0,
+        "tonnes_per_year": 30989.999999999996,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_70",
-        "to_id": "D_KAL_SUP_66",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "tonnes_per_year": 17250.000000000113,
+        "tonnes_per_year": 15250.00000000005,
         "mode": "truck"
       },
       {
@@ -817,14 +810,14 @@
         "from_id": "KAL_SUP_72",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "tonnes_per_year": 29259.999999999905,
+        "tonnes_per_year": 27259.999999998883,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_72",
         "to_id": "D_KAL_SUP_79",
         "stage": "source_depot",
-        "tonnes_per_year": 70160.0000000001,
+        "tonnes_per_year": 72160.00000000112,
         "mode": "truck"
       },
       {
@@ -838,14 +831,14 @@
         "from_id": "KAL_SUP_74",
         "to_id": "D_KAL_SUP_08",
         "stage": "source_depot",
-        "tonnes_per_year": 85430.00000000016,
+        "tonnes_per_year": 85429.99999999999,
         "mode": "truck"
       },
       {
         "from_id": "KAL_SUP_74",
         "to_id": "D_KAL_SUP_39",
         "stage": "source_depot",
-        "tonnes_per_year": 14179.999999999836,
+        "tonnes_per_year": 14180.000000000007,
         "mode": "truck"
       },
       {
@@ -859,7 +852,7 @@
         "from_id": "KAL_SUP_76",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "tonnes_per_year": 27790.0,
+        "tonnes_per_year": 27789.999999999978,
         "mode": "truck"
       },
       {
@@ -884,17 +877,10 @@
         "mode": "truck"
       },
       {
-        "from_id": "D_KAL_SUP_04",
-        "to_id": "R_KAL_SUP_77",
-        "stage": "depot_refinery",
-        "tonnes_per_year": 59840.000000000204,
-        "mode": "truck"
-      },
-      {
         "from_id": "D_KAL_SUP_08",
         "to_id": "R_KAL_SUP_34",
         "stage": "depot_refinery",
-        "tonnes_per_year": 274970.0000000003,
+        "tonnes_per_year": 274970.0,
         "mode": "truck"
       },
       {
@@ -908,21 +894,42 @@
         "from_id": "D_KAL_SUP_11",
         "to_id": "R_KAL_SUP_77",
         "stage": "depot_refinery",
-        "tonnes_per_year": 92160.0,
+        "tonnes_per_year": 150000.0,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_23",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "tonnes_per_year": 300000.0,
+        "tonnes_per_year": 299999.99999999994,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_28",
         "to_id": "R_KAL_SUP_67",
         "stage": "depot_refinery",
-        "tonnes_per_year": 150000.0,
+        "tonnes_per_year": 147999.999999999,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_28",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 2000.0000000002665,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_30",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 112999.9999999998,
+        "mode": "truck"
+      },
+      {
+        "from_id": "D_KAL_SUP_30",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "tonnes_per_year": 187000.0000000002,
         "mode": "truck"
       },
       {
@@ -936,21 +943,21 @@
         "from_id": "D_KAL_SUP_39",
         "to_id": "R_KAL_SUP_34",
         "stage": "depot_refinery",
-        "tonnes_per_year": 212029.9999999997,
+        "tonnes_per_year": 212029.99999999997,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_39",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "tonnes_per_year": 87970.00000000028,
+        "tonnes_per_year": 87970.00000000003,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_40",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "tonnes_per_year": 299999.9999999997,
+        "tonnes_per_year": 300000.00000000006,
         "mode": "truck"
       },
       {
@@ -964,7 +971,7 @@
         "from_id": "D_KAL_SUP_44",
         "to_id": "R_KAL_SUP_54",
         "stage": "depot_refinery",
-        "tonnes_per_year": 299999.9999999999,
+        "tonnes_per_year": 300000.0,
         "mode": "truck"
       },
       {
@@ -978,7 +985,7 @@
         "from_id": "D_KAL_SUP_53",
         "to_id": "R_KAL_SUP_34",
         "stage": "depot_refinery",
-        "tonnes_per_year": 299999.9999999998,
+        "tonnes_per_year": 300000.0,
         "mode": "truck"
       },
       {
@@ -999,49 +1006,35 @@
         "from_id": "D_KAL_SUP_65",
         "to_id": "R_KAL_SUP_67",
         "stage": "depot_refinery",
-        "tonnes_per_year": 37000.000000000226,
+        "tonnes_per_year": 39000.000000001026,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_65",
         "to_id": "R_KAL_SUP_49",
         "stage": "depot_refinery",
-        "tonnes_per_year": 262999.99999999977,
-        "mode": "truck"
-      },
-      {
-        "from_id": "D_KAL_SUP_66",
-        "to_id": "R_KAL_SUP_77",
-        "stage": "depot_refinery",
-        "tonnes_per_year": 112999.99999999971,
-        "mode": "truck"
-      },
-      {
-        "from_id": "D_KAL_SUP_66",
-        "to_id": "R_KAL_SUP_54",
-        "stage": "depot_refinery",
-        "tonnes_per_year": 187000.00000000012,
+        "tonnes_per_year": 260999.99999999898,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_67",
         "to_id": "R_KAL_SUP_67",
         "stage": "depot_refinery",
-        "tonnes_per_year": 299999.9999999999,
+        "tonnes_per_year": 300000.0,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_68",
         "to_id": "R_KAL_SUP_49",
         "stage": "depot_refinery",
-        "tonnes_per_year": 300000.0,
+        "tonnes_per_year": 299999.9999999982,
         "mode": "truck"
       },
       {
         "from_id": "D_KAL_SUP_73",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "tonnes_per_year": 99029.99999999985,
+        "tonnes_per_year": 99030.0,
         "mode": "truck"
       },
       {
@@ -1055,7 +1048,7 @@
         "from_id": "D_KAL_SUP_78",
         "to_id": "R_KAL_SUP_49",
         "stage": "depot_refinery",
-        "tonnes_per_year": 224000.00000000012,
+        "tonnes_per_year": 225999.99999999919,
         "mode": "truck"
       },
       {
@@ -1118,46 +1111,46 @@
         "from_id": "R_KAL_SUP_54",
         "to_id": "BPN",
         "stage": "refinery_airport",
-        "tonnes_per_year": 187000.00000000015,
+        "tonnes_per_year": 187000.00000000003,
         "mode": "truck"
       },
       {
         "from_id": "R_KAL_SUP_54",
         "to_id": "TRK",
         "stage": "refinery_airport",
-        "tonnes_per_year": 30399.99999999986,
+        "tonnes_per_year": 30399.999999999978,
         "mode": "barge"
       }
     ],
     "deliveries_t_per_year": {
       "PNK": 300000.0,
       "PKN": 300000.0,
-      "BPN": 300000.0000000001,
-      "TRK": 299999.9999999999
+      "BPN": 300000.0,
+      "TRK": 300000.0
     },
     "costs": {
-      "capex_usd": 4684500000.0,
-      "annualised_capex_usd_per_year": 234225000.0,
-      "fixed_opex_usd_per_year": 234225000.0,
-      "variable_opex_usd_per_year": 354401030.0,
-      "opex_usd_per_year": 588626030.0,
-      "transport_usd_per_year": 123775311.34859325,
-      "total_usd_per_year": 946626341.3485932
+      "capex_usd": 4682250000.0,
+      "annualised_capex_usd_per_year": 234112500.0,
+      "fixed_opex_usd_per_year": 234112500.0,
+      "variable_opex_usd_per_year": 354399030.0,
+      "opex_usd_per_year": 588511530.0,
+      "transport_usd_per_year": 124057031.42968772,
+      "total_usd_per_year": 946681061.4296877
     },
     "truck_trips": [
       {
         "from_id": "KAL_SUP_01",
         "to_id": "D_KAL_SUP_49",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 23143.333333333332,
-        "large_trip_equivalents_per_year": 7714.444444444444
+        "small_trip_equivalents_per_year": 23143.333333332386,
+        "large_trip_equivalents_per_year": 7714.444444444129
       },
       {
         "from_id": "KAL_SUP_01",
         "to_id": "D_KAL_SUP_68",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 6896.666666666665,
-        "large_trip_equivalents_per_year": 2298.8888888888887
+        "small_trip_equivalents_per_year": 6896.666666667614,
+        "large_trip_equivalents_per_year": 2298.8888888892047
       },
       {
         "from_id": "KAL_SUP_02",
@@ -1168,31 +1161,24 @@
       },
       {
         "from_id": "KAL_SUP_04",
-        "to_id": "D_KAL_SUP_04",
-        "stage": "source_depot",
-        "small_trip_equivalents_per_year": 19946.666666666737,
-        "large_trip_equivalents_per_year": 6648.888888888912
-      },
-      {
-        "from_id": "KAL_SUP_04",
         "to_id": "D_KAL_SUP_54",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 5659.999999999921,
-        "large_trip_equivalents_per_year": 1886.6666666666404
+        "small_trip_equivalents_per_year": 25606.66666666666,
+        "large_trip_equivalents_per_year": 8535.555555555555
       },
       {
         "from_id": "KAL_SUP_04",
         "to_id": "D_KAL_SUP_77",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 7466.666666666678,
-        "large_trip_equivalents_per_year": 2488.8888888888923
+        "small_trip_equivalents_per_year": 7466.666666666672,
+        "large_trip_equivalents_per_year": 2488.888888888891
       },
       {
         "from_id": "KAL_SUP_05",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 706.6666666666966,
-        "large_trip_equivalents_per_year": 235.55555555556555
+        "small_trip_equivalents_per_year": 1373.3333333335813,
+        "large_trip_equivalents_per_year": 457.7777777778604
       },
       {
         "from_id": "KAL_SUP_06",
@@ -1205,15 +1191,15 @@
         "from_id": "KAL_SUP_07",
         "to_id": "D_KAL_SUP_49",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 19599.999999999967,
-        "large_trip_equivalents_per_year": 6533.333333333322
+        "small_trip_equivalents_per_year": 18933.333333333867,
+        "large_trip_equivalents_per_year": 6311.111111111289
       },
       {
         "from_id": "KAL_SUP_07",
         "to_id": "D_KAL_SUP_78",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 10086.666666666702,
-        "large_trip_equivalents_per_year": 3362.222222222234
+        "small_trip_equivalents_per_year": 10753.3333333328,
+        "large_trip_equivalents_per_year": 3584.4444444442665
       },
       {
         "from_id": "KAL_SUP_08",
@@ -1233,36 +1219,43 @@
         "from_id": "KAL_SUP_10",
         "to_id": "D_KAL_SUP_10",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 33170.00000000001,
-        "large_trip_equivalents_per_year": 11056.666666666668
+        "small_trip_equivalents_per_year": 33170.0,
+        "large_trip_equivalents_per_year": 11056.666666666666
       },
       {
         "from_id": "KAL_SUP_11",
         "to_id": "D_KAL_SUP_11",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 30719.999999999996,
-        "large_trip_equivalents_per_year": 10239.999999999998
+        "small_trip_equivalents_per_year": 30719.99999999999,
+        "large_trip_equivalents_per_year": 10239.999999999996
       },
       {
         "from_id": "KAL_SUP_12",
         "to_id": "D_KAL_SUP_64",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 31266.666666666668,
-        "large_trip_equivalents_per_year": 10422.222222222223
+        "small_trip_equivalents_per_year": 31266.666666666682,
+        "large_trip_equivalents_per_year": 10422.222222222226
+      },
+      {
+        "from_id": "KAL_SUP_13",
+        "to_id": "D_KAL_SUP_30",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 853.3333333333175,
+        "large_trip_equivalents_per_year": 284.4444444444391
       },
       {
         "from_id": "KAL_SUP_13",
         "to_id": "D_KAL_SUP_44",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 30936.666666666686,
-        "large_trip_equivalents_per_year": 10312.222222222228
+        "small_trip_equivalents_per_year": 30083.33333333337,
+        "large_trip_equivalents_per_year": 10027.777777777788
       },
       {
         "from_id": "KAL_SUP_14",
         "to_id": "D_KAL_SUP_68",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 9780.0,
-        "large_trip_equivalents_per_year": 3260.0
+        "small_trip_equivalents_per_year": 9780.000000000002,
+        "large_trip_equivalents_per_year": 3260.0000000000005
       },
       {
         "from_id": "KAL_SUP_15",
@@ -1275,64 +1268,50 @@
         "from_id": "KAL_SUP_16",
         "to_id": "D_KAL_SUP_64",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 6703.333333333331,
-        "large_trip_equivalents_per_year": 2234.4444444444434
+        "small_trip_equivalents_per_year": 6703.3333333333185,
+        "large_trip_equivalents_per_year": 2234.44444444444
       },
       {
         "from_id": "KAL_SUP_16",
         "to_id": "D_KAL_SUP_67",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 26046.66666666667,
-        "large_trip_equivalents_per_year": 8682.222222222224
-      },
-      {
-        "from_id": "KAL_SUP_17",
-        "to_id": "D_KAL_SUP_10",
-        "stage": "source_depot",
-        "small_trip_equivalents_per_year": 6719.999999999994,
-        "large_trip_equivalents_per_year": 2239.999999999998
+        "small_trip_equivalents_per_year": 26046.666666666682,
+        "large_trip_equivalents_per_year": 8682.222222222226
       },
       {
         "from_id": "KAL_SUP_17",
         "to_id": "D_KAL_SUP_44",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 22703.33333333334,
-        "large_trip_equivalents_per_year": 7567.777777777779
+        "small_trip_equivalents_per_year": 29423.333333333347,
+        "large_trip_equivalents_per_year": 9807.777777777783
       },
       {
         "from_id": "KAL_SUP_18",
-        "to_id": "D_KAL_SUP_44",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 7379.999999999952,
-        "large_trip_equivalents_per_year": 2459.9999999999836
-      },
-      {
-        "from_id": "KAL_SUP_18",
-        "to_id": "D_KAL_SUP_66",
-        "stage": "source_depot",
-        "small_trip_equivalents_per_year": 23583.333333333383,
-        "large_trip_equivalents_per_year": 7861.111111111128
+        "small_trip_equivalents_per_year": 30963.333333333332,
+        "large_trip_equivalents_per_year": 10321.111111111111
       },
       {
         "from_id": "KAL_SUP_19",
         "to_id": "D_KAL_SUP_49",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 14526.666666666699,
-        "large_trip_equivalents_per_year": 4842.222222222233
+        "small_trip_equivalents_per_year": 15193.333333333745,
+        "large_trip_equivalents_per_year": 5064.444444444582
       },
       {
         "from_id": "KAL_SUP_19",
         "to_id": "D_KAL_SUP_67",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 13769.999999999995,
-        "large_trip_equivalents_per_year": 4589.999999999998
+        "small_trip_equivalents_per_year": 13769.999999999949,
+        "large_trip_equivalents_per_year": 4589.999999999983
       },
       {
         "from_id": "KAL_SUP_19",
         "to_id": "D_KAL_SUP_79",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 4939.999999999969,
-        "large_trip_equivalents_per_year": 1646.6666666666563
+        "small_trip_equivalents_per_year": 4273.333333332971,
+        "large_trip_equivalents_per_year": 1424.4444444443236
       },
       {
         "from_id": "KAL_SUP_20",
@@ -1343,10 +1322,17 @@
       },
       {
         "from_id": "KAL_SUP_21",
+        "to_id": "D_KAL_SUP_10",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 16590.000000000142,
+        "large_trip_equivalents_per_year": 5530.000000000047
+      },
+      {
+        "from_id": "KAL_SUP_21",
         "to_id": "D_KAL_SUP_54",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 30216.666666666668,
-        "large_trip_equivalents_per_year": 10072.222222222223
+        "small_trip_equivalents_per_year": 13626.666666666548,
+        "large_trip_equivalents_per_year": 4542.222222222183
       },
       {
         "from_id": "KAL_SUP_22",
@@ -1373,15 +1359,15 @@
         "from_id": "KAL_SUP_25",
         "to_id": "D_KAL_SUP_08",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 29333.333333333183,
-        "large_trip_equivalents_per_year": 9777.777777777728
+        "small_trip_equivalents_per_year": 29333.333333333332,
+        "large_trip_equivalents_per_year": 9777.777777777777
       },
       {
         "from_id": "KAL_SUP_27",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 31083.33333333333,
-        "large_trip_equivalents_per_year": 10361.11111111111
+        "small_trip_equivalents_per_year": 31083.333333333332,
+        "large_trip_equivalents_per_year": 10361.111111111111
       },
       {
         "from_id": "KAL_SUP_28",
@@ -1399,17 +1385,10 @@
       },
       {
         "from_id": "KAL_SUP_30",
-        "to_id": "D_KAL_SUP_54",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 3356.6666666667447,
-        "large_trip_equivalents_per_year": 1118.888888888915
-      },
-      {
-        "from_id": "KAL_SUP_30",
-        "to_id": "D_KAL_SUP_66",
-        "stage": "source_depot",
-        "small_trip_equivalents_per_year": 29913.33333333326,
-        "large_trip_equivalents_per_year": 9971.111111111088
+        "small_trip_equivalents_per_year": 33270.00000000001,
+        "large_trip_equivalents_per_year": 11090.000000000002
       },
       {
         "from_id": "KAL_SUP_31",
@@ -1455,10 +1434,10 @@
       },
       {
         "from_id": "KAL_SUP_38",
-        "to_id": "D_KAL_SUP_66",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 7873.333333333328,
-        "large_trip_equivalents_per_year": 2624.4444444444425
+        "small_trip_equivalents_per_year": 7873.333333333331,
+        "large_trip_equivalents_per_year": 2624.4444444444434
       },
       {
         "from_id": "KAL_SUP_39",
@@ -1478,15 +1457,15 @@
         "from_id": "KAL_SUP_41",
         "to_id": "D_KAL_SUP_23",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 10383.333333333321,
-        "large_trip_equivalents_per_year": 3461.111111111107
+        "small_trip_equivalents_per_year": 10383.333333333312,
+        "large_trip_equivalents_per_year": 3461.111111111104
       },
       {
         "from_id": "KAL_SUP_41",
         "to_id": "D_KAL_SUP_42",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 19976.66666666668,
-        "large_trip_equivalents_per_year": 6658.888888888893
+        "small_trip_equivalents_per_year": 19976.66666666669,
+        "large_trip_equivalents_per_year": 6658.888888888896
       },
       {
         "from_id": "KAL_SUP_42",
@@ -1499,15 +1478,15 @@
         "from_id": "KAL_SUP_43",
         "to_id": "D_KAL_SUP_42",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 11463.333333333283,
-        "large_trip_equivalents_per_year": 3821.111111111094
+        "small_trip_equivalents_per_year": 11463.333333333323,
+        "large_trip_equivalents_per_year": 3821.1111111111077
       },
       {
         "from_id": "KAL_SUP_43",
         "to_id": "D_KAL_SUP_53",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 17856.66666666672,
-        "large_trip_equivalents_per_year": 5952.222222222239
+        "small_trip_equivalents_per_year": 17856.666666666675,
+        "large_trip_equivalents_per_year": 5952.222222222224
       },
       {
         "from_id": "KAL_SUP_44",
@@ -1520,22 +1499,22 @@
         "from_id": "KAL_SUP_45",
         "to_id": "D_KAL_SUP_28",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 20466.666666666664,
-        "large_trip_equivalents_per_year": 6822.222222222222
+        "small_trip_equivalents_per_year": 20466.66666666654,
+        "large_trip_equivalents_per_year": 6822.22222222218
       },
       {
         "from_id": "KAL_SUP_45",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 11050.000000000013,
-        "large_trip_equivalents_per_year": 3683.3333333333376
+        "small_trip_equivalents_per_year": 11050.000000000133,
+        "large_trip_equivalents_per_year": 3683.3333333333776
       },
       {
         "from_id": "KAL_SUP_46",
         "to_id": "D_KAL_SUP_39",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 32063.333333333387,
-        "large_trip_equivalents_per_year": 10687.777777777796
+        "small_trip_equivalents_per_year": 32063.333333333332,
+        "large_trip_equivalents_per_year": 10687.777777777777
       },
       {
         "from_id": "KAL_SUP_47",
@@ -1548,15 +1527,15 @@
         "from_id": "KAL_SUP_48",
         "to_id": "D_KAL_SUP_23",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 29473.333333333347,
-        "large_trip_equivalents_per_year": 9824.444444444449
+        "small_trip_equivalents_per_year": 29473.333333333332,
+        "large_trip_equivalents_per_year": 9824.444444444445
       },
       {
         "from_id": "KAL_SUP_48",
         "to_id": "D_KAL_SUP_40",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 176.66666666665284,
-        "large_trip_equivalents_per_year": 58.88888888888428
+        "small_trip_equivalents_per_year": 176.66666666666706,
+        "large_trip_equivalents_per_year": 58.888888888889014
       },
       {
         "from_id": "KAL_SUP_49",
@@ -1583,8 +1562,8 @@
         "from_id": "KAL_SUP_52",
         "to_id": "D_KAL_SUP_10",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 30190.000000000004,
-        "large_trip_equivalents_per_year": 10063.333333333336
+        "small_trip_equivalents_per_year": 30189.999999999854,
+        "large_trip_equivalents_per_year": 10063.333333333285
       },
       {
         "from_id": "KAL_SUP_53",
@@ -1604,8 +1583,15 @@
         "from_id": "KAL_SUP_55",
         "to_id": "D_KAL_SUP_10",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 29920.0,
-        "large_trip_equivalents_per_year": 9973.333333333334
+        "small_trip_equivalents_per_year": 20050.00000000002,
+        "large_trip_equivalents_per_year": 6683.333333333339
+      },
+      {
+        "from_id": "KAL_SUP_55",
+        "to_id": "D_KAL_SUP_44",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 9869.999999999976,
+        "large_trip_equivalents_per_year": 3289.999999999992
       },
       {
         "from_id": "KAL_SUP_56",
@@ -1616,7 +1602,7 @@
       },
       {
         "from_id": "KAL_SUP_57",
-        "to_id": "D_KAL_SUP_44",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
         "small_trip_equivalents_per_year": 8356.666666666666,
         "large_trip_equivalents_per_year": 2785.5555555555557
@@ -1625,8 +1611,8 @@
         "from_id": "KAL_SUP_58",
         "to_id": "D_KAL_SUP_42",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 8293.333333333365,
-        "large_trip_equivalents_per_year": 2764.444444444455
+        "small_trip_equivalents_per_year": 8293.333333333318,
+        "large_trip_equivalents_per_year": 2764.4444444444393
       },
       {
         "from_id": "KAL_SUP_61",
@@ -1646,22 +1632,22 @@
         "from_id": "KAL_SUP_62",
         "to_id": "D_KAL_SUP_53",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 23180.0,
-        "large_trip_equivalents_per_year": 7726.666666666667
+        "small_trip_equivalents_per_year": 23180.000000000004,
+        "large_trip_equivalents_per_year": 7726.666666666668
       },
       {
         "from_id": "KAL_SUP_63",
         "to_id": "D_KAL_SUP_08",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 2513.3333333335345,
-        "large_trip_equivalents_per_year": 837.7777777778448
+        "small_trip_equivalents_per_year": 2513.333333333345,
+        "large_trip_equivalents_per_year": 837.7777777777816
       },
       {
         "from_id": "KAL_SUP_63",
         "to_id": "D_KAL_SUP_53",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 28396.666666666468,
-        "large_trip_equivalents_per_year": 9465.55555555549
+        "small_trip_equivalents_per_year": 28396.666666666657,
+        "large_trip_equivalents_per_year": 9465.555555555553
       },
       {
         "from_id": "KAL_SUP_64",
@@ -1679,10 +1665,17 @@
       },
       {
         "from_id": "KAL_SUP_66",
-        "to_id": "D_KAL_SUP_66",
+        "to_id": "D_KAL_SUP_11",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 32879.99999999999,
-        "large_trip_equivalents_per_year": 10959.999999999998
+        "small_trip_equivalents_per_year": 19279.999999999996,
+        "large_trip_equivalents_per_year": 6426.666666666666
+      },
+      {
+        "from_id": "KAL_SUP_66",
+        "to_id": "D_KAL_SUP_30",
+        "stage": "source_depot",
+        "small_trip_equivalents_per_year": 13600.000000000015,
+        "large_trip_equivalents_per_year": 4533.3333333333385
       },
       {
         "from_id": "KAL_SUP_67",
@@ -1702,15 +1695,15 @@
         "from_id": "KAL_SUP_69",
         "to_id": "D_KAL_SUP_68",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 10330.0,
-        "large_trip_equivalents_per_year": 3443.3333333333335
+        "small_trip_equivalents_per_year": 10329.999999999998,
+        "large_trip_equivalents_per_year": 3443.333333333333
       },
       {
         "from_id": "KAL_SUP_70",
-        "to_id": "D_KAL_SUP_66",
+        "to_id": "D_KAL_SUP_30",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 5750.000000000037,
-        "large_trip_equivalents_per_year": 1916.6666666666792
+        "small_trip_equivalents_per_year": 5083.333333333349,
+        "large_trip_equivalents_per_year": 1694.4444444444498
       },
       {
         "from_id": "KAL_SUP_71",
@@ -1723,15 +1716,15 @@
         "from_id": "KAL_SUP_72",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 9753.333333333301,
-        "large_trip_equivalents_per_year": 3251.1111111111004
+        "small_trip_equivalents_per_year": 9086.666666666295,
+        "large_trip_equivalents_per_year": 3028.888888888765
       },
       {
         "from_id": "KAL_SUP_72",
         "to_id": "D_KAL_SUP_79",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 23386.6666666667,
-        "large_trip_equivalents_per_year": 7795.555555555567
+        "small_trip_equivalents_per_year": 24053.333333333707,
+        "large_trip_equivalents_per_year": 8017.777777777902
       },
       {
         "from_id": "KAL_SUP_73",
@@ -1744,15 +1737,15 @@
         "from_id": "KAL_SUP_74",
         "to_id": "D_KAL_SUP_08",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 28476.66666666672,
-        "large_trip_equivalents_per_year": 9492.22222222224
+        "small_trip_equivalents_per_year": 28476.66666666666,
+        "large_trip_equivalents_per_year": 9492.22222222222
       },
       {
         "from_id": "KAL_SUP_74",
         "to_id": "D_KAL_SUP_39",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 4726.666666666612,
-        "large_trip_equivalents_per_year": 1575.5555555555375
+        "small_trip_equivalents_per_year": 4726.666666666669,
+        "large_trip_equivalents_per_year": 1575.5555555555563
       },
       {
         "from_id": "KAL_SUP_75",
@@ -1765,8 +1758,8 @@
         "from_id": "KAL_SUP_76",
         "to_id": "D_KAL_SUP_65",
         "stage": "source_depot",
-        "small_trip_equivalents_per_year": 9263.333333333334,
-        "large_trip_equivalents_per_year": 3087.777777777778
+        "small_trip_equivalents_per_year": 9263.333333333327,
+        "large_trip_equivalents_per_year": 3087.7777777777756
       },
       {
         "from_id": "KAL_SUP_77",
@@ -1790,18 +1783,11 @@
         "large_trip_equivalents_per_year": 3616.666666666666
       },
       {
-        "from_id": "D_KAL_SUP_04",
-        "to_id": "R_KAL_SUP_77",
-        "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 3324.4444444444557,
-        "large_trip_equivalents_per_year": 1994.6666666666736
-      },
-      {
         "from_id": "D_KAL_SUP_08",
         "to_id": "R_KAL_SUP_34",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 15276.111111111128,
-        "large_trip_equivalents_per_year": 9165.666666666677
+        "small_trip_equivalents_per_year": 15276.111111111111,
+        "large_trip_equivalents_per_year": 9165.666666666666
       },
       {
         "from_id": "D_KAL_SUP_10",
@@ -1814,22 +1800,43 @@
         "from_id": "D_KAL_SUP_11",
         "to_id": "R_KAL_SUP_77",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 5120.0,
-        "large_trip_equivalents_per_year": 3072.0
+        "small_trip_equivalents_per_year": 8333.333333333334,
+        "large_trip_equivalents_per_year": 5000.0
       },
       {
         "from_id": "D_KAL_SUP_23",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 16666.666666666668,
-        "large_trip_equivalents_per_year": 10000.0
+        "small_trip_equivalents_per_year": 16666.666666666664,
+        "large_trip_equivalents_per_year": 9999.999999999998
       },
       {
         "from_id": "D_KAL_SUP_28",
         "to_id": "R_KAL_SUP_67",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 8333.333333333334,
-        "large_trip_equivalents_per_year": 5000.0
+        "small_trip_equivalents_per_year": 8222.222222222168,
+        "large_trip_equivalents_per_year": 4933.3333333333
+      },
+      {
+        "from_id": "D_KAL_SUP_28",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 111.11111111112592,
+        "large_trip_equivalents_per_year": 66.66666666667555
+      },
+      {
+        "from_id": "D_KAL_SUP_30",
+        "to_id": "R_KAL_SUP_77",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 6277.7777777777665,
+        "large_trip_equivalents_per_year": 3766.6666666666597
+      },
+      {
+        "from_id": "D_KAL_SUP_30",
+        "to_id": "R_KAL_SUP_54",
+        "stage": "depot_refinery",
+        "small_trip_equivalents_per_year": 10388.8888888889,
+        "large_trip_equivalents_per_year": 6233.33333333334
       },
       {
         "from_id": "D_KAL_SUP_34",
@@ -1842,22 +1849,22 @@
         "from_id": "D_KAL_SUP_39",
         "to_id": "R_KAL_SUP_34",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 11779.444444444429,
-        "large_trip_equivalents_per_year": 7067.666666666657
+        "small_trip_equivalents_per_year": 11779.444444444443,
+        "large_trip_equivalents_per_year": 7067.666666666666
       },
       {
         "from_id": "D_KAL_SUP_39",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 4887.222222222237,
-        "large_trip_equivalents_per_year": 2932.3333333333426
+        "small_trip_equivalents_per_year": 4887.2222222222235,
+        "large_trip_equivalents_per_year": 2932.3333333333344
       },
       {
         "from_id": "D_KAL_SUP_40",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 16666.66666666665,
-        "large_trip_equivalents_per_year": 9999.99999999999
+        "small_trip_equivalents_per_year": 16666.66666666667,
+        "large_trip_equivalents_per_year": 10000.000000000002
       },
       {
         "from_id": "D_KAL_SUP_42",
@@ -1870,8 +1877,8 @@
         "from_id": "D_KAL_SUP_44",
         "to_id": "R_KAL_SUP_54",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 16666.66666666666,
-        "large_trip_equivalents_per_year": 9999.999999999996
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
       },
       {
         "from_id": "D_KAL_SUP_49",
@@ -1884,8 +1891,8 @@
         "from_id": "D_KAL_SUP_53",
         "to_id": "R_KAL_SUP_34",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 16666.666666666657,
-        "large_trip_equivalents_per_year": 9999.999999999995
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
       },
       {
         "from_id": "D_KAL_SUP_54",
@@ -1905,50 +1912,36 @@
         "from_id": "D_KAL_SUP_65",
         "to_id": "R_KAL_SUP_67",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 2055.555555555568,
-        "large_trip_equivalents_per_year": 1233.3333333333408
+        "small_trip_equivalents_per_year": 2166.666666666724,
+        "large_trip_equivalents_per_year": 1300.000000000034
       },
       {
         "from_id": "D_KAL_SUP_65",
         "to_id": "R_KAL_SUP_49",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 14611.111111111099,
-        "large_trip_equivalents_per_year": 8766.666666666659
-      },
-      {
-        "from_id": "D_KAL_SUP_66",
-        "to_id": "R_KAL_SUP_77",
-        "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 6277.777777777762,
-        "large_trip_equivalents_per_year": 3766.666666666657
-      },
-      {
-        "from_id": "D_KAL_SUP_66",
-        "to_id": "R_KAL_SUP_54",
-        "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 10388.888888888896,
-        "large_trip_equivalents_per_year": 6233.333333333338
+        "small_trip_equivalents_per_year": 14499.999999999944,
+        "large_trip_equivalents_per_year": 8699.999999999965
       },
       {
         "from_id": "D_KAL_SUP_67",
         "to_id": "R_KAL_SUP_67",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 16666.66666666666,
-        "large_trip_equivalents_per_year": 9999.999999999996
+        "small_trip_equivalents_per_year": 16666.666666666668,
+        "large_trip_equivalents_per_year": 10000.0
       },
       {
         "from_id": "D_KAL_SUP_68",
         "to_id": "R_KAL_SUP_49",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 16666.666666666668,
-        "large_trip_equivalents_per_year": 10000.0
+        "small_trip_equivalents_per_year": 16666.666666666566,
+        "large_trip_equivalents_per_year": 9999.99999999994
       },
       {
         "from_id": "D_KAL_SUP_73",
         "to_id": "R_KAL_SUP_42",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 5501.666666666659,
-        "large_trip_equivalents_per_year": 3300.999999999995
+        "small_trip_equivalents_per_year": 5501.666666666667,
+        "large_trip_equivalents_per_year": 3301.0
       },
       {
         "from_id": "D_KAL_SUP_77",
@@ -1961,8 +1954,8 @@
         "from_id": "D_KAL_SUP_78",
         "to_id": "R_KAL_SUP_49",
         "stage": "depot_refinery",
-        "small_trip_equivalents_per_year": 12444.44444444445,
-        "large_trip_equivalents_per_year": 7466.666666666671
+        "small_trip_equivalents_per_year": 12555.555555555511,
+        "large_trip_equivalents_per_year": 7533.333333333306
       },
       {
         "from_id": "D_KAL_SUP_79",
@@ -2010,8 +2003,8 @@
         "from_id": "R_KAL_SUP_54",
         "to_id": "BPN",
         "stage": "refinery_airport",
-        "small_trip_equivalents_per_year": 11687.50000000001,
-        "large_trip_equivalents_per_year": 5843.750000000005
+        "small_trip_equivalents_per_year": 11687.500000000002,
+        "large_trip_equivalents_per_year": 5843.750000000001
       }
     ]
   },
@@ -2060,16 +2053,6 @@
       },
       {
         "name": "mode ('KAL_SUP_02', 'D_KAL_SUP_78', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "edge ('KAL_SUP_04', 'D_KAL_SUP_04', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "mode ('KAL_SUP_04', 'D_KAL_SUP_04', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2184,6 +2167,16 @@
         "detail": ""
       },
       {
+        "name": "edge ('KAL_SUP_13', 'D_KAL_SUP_30', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_13', 'D_KAL_SUP_30', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
         "name": "edge ('KAL_SUP_13', 'D_KAL_SUP_44', 'source_depot')",
         "passed": true,
         "detail": ""
@@ -2234,16 +2227,6 @@
         "detail": ""
       },
       {
-        "name": "edge ('KAL_SUP_17', 'D_KAL_SUP_10', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "mode ('KAL_SUP_17', 'D_KAL_SUP_10', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
         "name": "edge ('KAL_SUP_17', 'D_KAL_SUP_44', 'source_depot')",
         "passed": true,
         "detail": ""
@@ -2254,22 +2237,12 @@
         "detail": ""
       },
       {
-        "name": "edge ('KAL_SUP_18', 'D_KAL_SUP_44', 'source_depot')",
+        "name": "edge ('KAL_SUP_18', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "mode ('KAL_SUP_18', 'D_KAL_SUP_44', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "edge ('KAL_SUP_18', 'D_KAL_SUP_66', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "mode ('KAL_SUP_18', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "mode ('KAL_SUP_18', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2310,6 +2283,16 @@
       },
       {
         "name": "mode ('KAL_SUP_20', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_21', 'D_KAL_SUP_10', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_21', 'D_KAL_SUP_10', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2394,22 +2377,12 @@
         "detail": ""
       },
       {
-        "name": "edge ('KAL_SUP_30', 'D_KAL_SUP_54', 'source_depot')",
+        "name": "edge ('KAL_SUP_30', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "mode ('KAL_SUP_30', 'D_KAL_SUP_54', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "edge ('KAL_SUP_30', 'D_KAL_SUP_66', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "mode ('KAL_SUP_30', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "mode ('KAL_SUP_30', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2474,12 +2447,12 @@
         "detail": ""
       },
       {
-        "name": "edge ('KAL_SUP_38', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "edge ('KAL_SUP_38', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "mode ('KAL_SUP_38', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "mode ('KAL_SUP_38', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2694,6 +2667,16 @@
         "detail": ""
       },
       {
+        "name": "edge ('KAL_SUP_55', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_55', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
         "name": "edge ('KAL_SUP_56', 'D_KAL_SUP_54', 'source_depot')",
         "passed": true,
         "detail": ""
@@ -2704,12 +2687,12 @@
         "detail": ""
       },
       {
-        "name": "edge ('KAL_SUP_57', 'D_KAL_SUP_44', 'source_depot')",
+        "name": "edge ('KAL_SUP_57', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "mode ('KAL_SUP_57', 'D_KAL_SUP_44', 'source_depot')",
+        "name": "mode ('KAL_SUP_57', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2794,12 +2777,22 @@
         "detail": ""
       },
       {
-        "name": "edge ('KAL_SUP_66', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "edge ('KAL_SUP_66', 'D_KAL_SUP_11', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "mode ('KAL_SUP_66', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "mode ('KAL_SUP_66', 'D_KAL_SUP_11', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('KAL_SUP_66', 'D_KAL_SUP_30', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('KAL_SUP_66', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2834,12 +2827,12 @@
         "detail": ""
       },
       {
-        "name": "edge ('KAL_SUP_70', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "edge ('KAL_SUP_70', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "mode ('KAL_SUP_70', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "mode ('KAL_SUP_70', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -2954,16 +2947,6 @@
         "detail": ""
       },
       {
-        "name": "edge ('D_KAL_SUP_04', 'R_KAL_SUP_77', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "mode ('D_KAL_SUP_04', 'R_KAL_SUP_77', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
         "name": "edge ('D_KAL_SUP_08', 'R_KAL_SUP_34', 'depot_refinery')",
         "passed": true,
         "detail": ""
@@ -3010,6 +2993,36 @@
       },
       {
         "name": "mode ('D_KAL_SUP_28', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_28', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_28', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_30', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_30', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "edge ('D_KAL_SUP_30', 'R_KAL_SUP_54', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "mode ('D_KAL_SUP_30', 'R_KAL_SUP_54', 'depot_refinery')",
         "passed": true,
         "detail": ""
       },
@@ -3130,26 +3143,6 @@
       },
       {
         "name": "mode ('D_KAL_SUP_65', 'R_KAL_SUP_49', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "edge ('D_KAL_SUP_66', 'R_KAL_SUP_77', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "mode ('D_KAL_SUP_66', 'R_KAL_SUP_77', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "edge ('D_KAL_SUP_66', 'R_KAL_SUP_54', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "mode ('D_KAL_SUP_66', 'R_KAL_SUP_54', 'depot_refinery')",
         "passed": true,
         "detail": ""
       },
@@ -3719,27 +3712,7 @@
         "detail": ""
       },
       {
-        "name": "kind D_KAL_SUP_04",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "capacity D_KAL_SUP_04",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "balance D_KAL_SUP_04",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "reported intake D_KAL_SUP_04",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "reported output D_KAL_SUP_04",
+        "name": "closed D_KAL_SUP_04",
         "passed": true,
         "detail": ""
       },
@@ -3969,7 +3942,27 @@
         "detail": ""
       },
       {
-        "name": "closed D_KAL_SUP_30",
+        "name": "kind D_KAL_SUP_30",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "capacity D_KAL_SUP_30",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "balance D_KAL_SUP_30",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported intake D_KAL_SUP_30",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "reported output D_KAL_SUP_30",
         "passed": true,
         "detail": ""
       },
@@ -4349,27 +4342,7 @@
         "detail": ""
       },
       {
-        "name": "kind D_KAL_SUP_66",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "capacity D_KAL_SUP_66",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "balance D_KAL_SUP_66",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "reported intake D_KAL_SUP_66",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "reported output D_KAL_SUP_66",
+        "name": "closed D_KAL_SUP_66",
         "passed": true,
         "detail": ""
       },
@@ -4824,11 +4797,6 @@
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_04', 'D_KAL_SUP_04', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
         "name": "truck payload ('KAL_SUP_04', 'D_KAL_SUP_54', 'source_depot')",
         "passed": true,
         "detail": ""
@@ -4884,6 +4852,11 @@
         "detail": ""
       },
       {
+        "name": "truck payload ('KAL_SUP_13', 'D_KAL_SUP_30', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
         "name": "truck payload ('KAL_SUP_13', 'D_KAL_SUP_44', 'source_depot')",
         "passed": true,
         "detail": ""
@@ -4909,22 +4882,12 @@
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_17', 'D_KAL_SUP_10', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
         "name": "truck payload ('KAL_SUP_17', 'D_KAL_SUP_44', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_18', 'D_KAL_SUP_44', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "truck payload ('KAL_SUP_18', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "truck payload ('KAL_SUP_18', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -4945,6 +4908,11 @@
       },
       {
         "name": "truck payload ('KAL_SUP_20', 'D_KAL_SUP_49', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_21', 'D_KAL_SUP_10', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -4989,12 +4957,7 @@
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_30', 'D_KAL_SUP_54', 'source_depot')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "truck payload ('KAL_SUP_30', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "truck payload ('KAL_SUP_30', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -5029,7 +4992,7 @@
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_38', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "truck payload ('KAL_SUP_38', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -5139,12 +5102,17 @@
         "detail": ""
       },
       {
+        "name": "truck payload ('KAL_SUP_55', 'D_KAL_SUP_44', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
         "name": "truck payload ('KAL_SUP_56', 'D_KAL_SUP_54', 'source_depot')",
         "passed": true,
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_57', 'D_KAL_SUP_44', 'source_depot')",
+        "name": "truck payload ('KAL_SUP_57', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -5189,7 +5157,12 @@
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_66', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "truck payload ('KAL_SUP_66', 'D_KAL_SUP_11', 'source_depot')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('KAL_SUP_66', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -5209,7 +5182,7 @@
         "detail": ""
       },
       {
-        "name": "truck payload ('KAL_SUP_70', 'D_KAL_SUP_66', 'source_depot')",
+        "name": "truck payload ('KAL_SUP_70', 'D_KAL_SUP_30', 'source_depot')",
         "passed": true,
         "detail": ""
       },
@@ -5269,11 +5242,6 @@
         "detail": ""
       },
       {
-        "name": "truck payload ('D_KAL_SUP_04', 'R_KAL_SUP_77', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
         "name": "truck payload ('D_KAL_SUP_08', 'R_KAL_SUP_34', 'depot_refinery')",
         "passed": true,
         "detail": ""
@@ -5295,6 +5263,21 @@
       },
       {
         "name": "truck payload ('D_KAL_SUP_28', 'R_KAL_SUP_67', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_28', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_30', 'R_KAL_SUP_77', 'depot_refinery')",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "truck payload ('D_KAL_SUP_30', 'R_KAL_SUP_54', 'depot_refinery')",
         "passed": true,
         "detail": ""
       },
@@ -5355,16 +5338,6 @@
       },
       {
         "name": "truck payload ('D_KAL_SUP_65', 'R_KAL_SUP_49', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "truck payload ('D_KAL_SUP_66', 'R_KAL_SUP_77', 'depot_refinery')",
-        "passed": true,
-        "detail": ""
-      },
-      {
-        "name": "truck payload ('D_KAL_SUP_66', 'R_KAL_SUP_54', 'depot_refinery')",
         "passed": true,
         "detail": ""
       },
@@ -5430,5 +5403,164 @@
       }
     ],
     "errors": []
-  }
+  },
+  "run_id": "20261031T142811+0800-be728b03",
+  "baseline_rule_checks": null,
+  "demand_capacity_proof": {
+    "source_count": 80,
+    "depot_candidates": 80,
+    "refinery_candidates": 8,
+    "supply_t_per_year": 6800000.0,
+    "demand_t_per_year": 1200000,
+    "maximum_saf_from_supply_t_per_year": 1360000.0,
+    "required_source_biomass_t_per_year": 6000000.0,
+    "required_refinery_intake_t_per_year": 6000000.0,
+    "demand_exceeds_supply_limit": false,
+    "baseline_depot_intake_capacity_t_per_year": 12000000,
+    "each_source_fits_small_depot": true,
+    "baseline_refinery_intake_capacity_t_per_year": 8696000,
+    "minimum_refineries_at_large_capacity": 6
+  },
+  "facility_coordinates": [
+    {
+      "candidate_id": "D_KAL_SUP_08",
+      "latitude": 0.2911,
+      "longitude": 110.6932
+    },
+    {
+      "candidate_id": "D_KAL_SUP_10",
+      "latitude": -0.6682,
+      "longitude": 116.8524
+    },
+    {
+      "candidate_id": "D_KAL_SUP_11",
+      "latitude": -0.664,
+      "longitude": 117.3125
+    },
+    {
+      "candidate_id": "D_KAL_SUP_23",
+      "latitude": -0.0962,
+      "longitude": 110.4256
+    },
+    {
+      "candidate_id": "D_KAL_SUP_28",
+      "latitude": -2.3295,
+      "longitude": 111.9558
+    },
+    {
+      "candidate_id": "D_KAL_SUP_30",
+      "latitude": -0.3435,
+      "longitude": 117.0175
+    },
+    {
+      "candidate_id": "D_KAL_SUP_34",
+      "latitude": 0.2514,
+      "longitude": 110.2592
+    },
+    {
+      "candidate_id": "D_KAL_SUP_39",
+      "latitude": 0.2131,
+      "longitude": 110.645
+    },
+    {
+      "candidate_id": "D_KAL_SUP_40",
+      "latitude": -0.2488,
+      "longitude": 110.4914
+    },
+    {
+      "candidate_id": "D_KAL_SUP_42",
+      "latitude": 0.133,
+      "longitude": 110.3271
+    },
+    {
+      "candidate_id": "D_KAL_SUP_44",
+      "latitude": -0.3668,
+      "longitude": 116.8975
+    },
+    {
+      "candidate_id": "D_KAL_SUP_49",
+      "latitude": -2.6715,
+      "longitude": 111.589
+    },
+    {
+      "candidate_id": "D_KAL_SUP_53",
+      "latitude": 0.2589,
+      "longitude": 110.3311
+    },
+    {
+      "candidate_id": "D_KAL_SUP_54",
+      "latitude": -0.712,
+      "longitude": 116.982
+    },
+    {
+      "candidate_id": "D_KAL_SUP_64",
+      "latitude": -2.6729,
+      "longitude": 112.0284
+    },
+    {
+      "candidate_id": "D_KAL_SUP_65",
+      "latitude": -2.5395,
+      "longitude": 111.7025
+    },
+    {
+      "candidate_id": "D_KAL_SUP_67",
+      "latitude": -2.6718,
+      "longitude": 111.704
+    },
+    {
+      "candidate_id": "D_KAL_SUP_68",
+      "latitude": -2.7388,
+      "longitude": 111.3012
+    },
+    {
+      "candidate_id": "D_KAL_SUP_73",
+      "latitude": -0.2772,
+      "longitude": 110.5956
+    },
+    {
+      "candidate_id": "D_KAL_SUP_77",
+      "latitude": -0.7849,
+      "longitude": 117.0677
+    },
+    {
+      "candidate_id": "D_KAL_SUP_78",
+      "latitude": -2.3248,
+      "longitude": 111.4876
+    },
+    {
+      "candidate_id": "D_KAL_SUP_79",
+      "latitude": -2.5115,
+      "longitude": 112.0284
+    },
+    {
+      "candidate_id": "R_KAL_SUP_34",
+      "latitude": 0.2514,
+      "longitude": 110.2592
+    },
+    {
+      "candidate_id": "R_KAL_SUP_42",
+      "latitude": 0.133,
+      "longitude": 110.3271
+    },
+    {
+      "candidate_id": "R_KAL_SUP_67",
+      "latitude": -2.6718,
+      "longitude": 111.704
+    },
+    {
+      "candidate_id": "R_KAL_SUP_49",
+      "latitude": -2.6715,
+      "longitude": 111.589
+    },
+    {
+      "candidate_id": "R_KAL_SUP_77",
+      "latitude": -0.7849,
+      "longitude": 117.0677
+    },
+    {
+      "candidate_id": "R_KAL_SUP_54",
+      "latitude": -0.712,
+      "longitude": 116.982
+    }
+  ]
 }
