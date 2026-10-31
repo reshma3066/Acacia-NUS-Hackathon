@@ -266,7 +266,7 @@ def render_dashboard(response: dict, baseline: Result | None) -> None:
         st.warning(f"**Claude needs clarification:** {response['clarification']}",icon='💬')
     if r is None:
         st.info('No plan was solved for this request; the scenario is unchanged.',icon='ℹ️')
-        if response.get('explanation'):st.caption(response['explanation'])
+        if response.get('explanation'):st.caption(response['explanation'].replace('$','\\$'))
         return
 
     usable=is_usable(r,v)
@@ -628,8 +628,8 @@ def _empty_state(st,config:str)->None:
                 '<h2>Where to build, how big, and what it costs per year</h2>'
                 '<div class="muted" style="font-size:.95rem;line-height:1.55">Plan a sustainable aviation fuel network across '
                 'Kalimantan: biomass sources → depots → refineries → four airports. Pick a scenario in the sidebar and press '
-                '<b>Solve</b>.</div><div class="howto">'
-                '<div><b>1 · Choose</b>Start from a demand scenario, or ask Claude for a change in plain English.</div>'
+                '<b>Run optimisation</b>.</div><div class="howto">'
+                '<div><b>1 · Choose</b>Start from a demand scenario, then optionally change one airport&#8217;s demand.</div>'
                 '<div><b>2 · Solve</b>A candidate-site MILP picks facilities and flows; a validator checks every number.</div>'
                 '<div><b>3 · Inspect</b>Explore the map, costs vs. baseline, and the evidence behind the plan.</div>'
                 '</div></div>')
@@ -641,21 +641,28 @@ def _empty_state(st,config:str)->None:
 
 def main()->None:
     import streamlit as st
-    st.set_page_config(page_title='SAF Planner | Kalimantan',layout='wide')
-    st.sidebar.header('Plan a scenario')
-    mode=st.sidebar.radio('Mode',['Live solve','Cached replay'],help='Cached replay shows recorded solver runs, labelled as cached. Use it if the network or API fails.')
-    config=st.sidebar.selectbox('Starting scenario',list(SCENARIOS),format_func=SCENARIOS.get)
-    request=None
-    if mode=='Live solve':
-        AIRPORTS={'PNK':'Supadio (Pontianak)','PKN':'Iskandar (Pangkalan Bun)',
-                  'BPN':'Sepinggan (Balikpapan)','TRK':'Juwata (Tarakan)'}
-        airport=st.sidebar.selectbox('Airport to change',list(AIRPORTS),format_func=lambda k:f'{k} – {AIRPORTS[k]}')
-        pct=st.sidebar.number_input('Demand change (%)',min_value=-100.0,max_value=200.0,value=0.0,step=5.0,
-                                    help='0 = no change (plain solve, no Claude call)')
-        request=None if pct==0 else f"{'Increase' if pct>0 else 'Decrease'} {airport} demand by {abs(pct):g}%"
-        st.sidebar.caption(f"Request sent to Claude: {request or 'none'}")
-        st.sidebar.caption('Claude only turns your words into a bounded demand patch. The solver computes every number; the validator checks it.')
-    if st.sidebar.button('Solve' if mode=='Live solve' else 'Load recorded run',type='primary'):
+    st.set_page_config(page_title='SAF Planner | Kalimantan',page_icon='✈️',layout='wide',initial_sidebar_state='expanded')
+    st.html(CSS)
+    with st.sidebar:
+        st.html('<div style="font-weight:800;font-size:1.05rem;color:#17323b">Plan a scenario</div>'
+                '<div class="side-foot" style="margin-bottom:6px">Configure inputs, then run the optimiser.</div>')
+        mode=st.segmented_control('Mode',['Live solve','Cached replay'],default='Live solve',width='stretch',
+                                  help='Cached replay shows recorded solver runs, labelled as cached. Use it if the network or API fails.') or 'Live solve'
+        config=st.selectbox('Starting scenario',list(SCENARIOS),format_func=SCENARIOS.get)
+        request=None
+        if mode=='Live solve':
+            AIRPORTS={'PNK':'Supadio (Pontianak)','PKN':'Iskandar (Pangkalan Bun)',
+                      'BPN':'Sepinggan (Balikpapan)','TRK':'Juwata (Tarakan)'}
+            airport=st.selectbox('Airport to change',list(AIRPORTS),format_func=lambda k:f'{k} – {AIRPORTS[k]}')
+            pct=st.number_input('Demand change (%)',min_value=-100.0,max_value=200.0,value=0.0,step=5.0,
+                                help='0 = no change (plain solve, no Claude call)')
+            request=None if pct==0 else f"{'Increase' if pct>0 else 'Decrease'} {airport} demand by {abs(pct):g}%"
+            st.html(f'<div class="side-foot" style="margin-bottom:4px">Request sent to Claude: <b>{_e(request or "none")}</b></div>')
+        go=st.button('Run optimisation' if mode=='Live solve' else 'Load recorded run',type='primary',width='stretch',
+                     icon=':material/play_arrow:' if mode=='Live solve' else ':material/history:')
+        st.html('<div class="side-foot">Claude only turns the request into a bounded demand patch. The solver computes every number; '
+                'an independent validator checks it before anything is shown.</div>')
+    if go:
         # Clear first so a failure can never leave the previous success on screen.
         st.session_state.pop('last',None)
         try:
