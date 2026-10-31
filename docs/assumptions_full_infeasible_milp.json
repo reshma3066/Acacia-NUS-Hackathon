@@ -30,9 +30,9 @@
     "scenario_id": "full-infeasible-v2.0",
     "provenance": "solver",
     "status": "infeasible",
-    "runtime_s": 2.155699985451065e-05,
+    "runtime_s": 0.006881000000021231,
     "mip_gap": null,
-    "message": "Demand exceeds feedstock-based SAF limit; no feasible flows.",
+    "message": "Demand 1,380,000.000 t/year exceeds feedstock-based SAF limit 1,360,000.000 t/year; no feasible flows.",
     "facilities": [],
     "flows": [],
     "deliveries_t_per_year": {},
@@ -55,5 +55,23 @@
     "errors": [
       "No feasible solution to validate"
     ]
-  }
+  },
+  "run_id": "20261031T142811+0800-be728b03",
+  "baseline_rule_checks": null,
+  "demand_capacity_proof": {
+    "source_count": 80,
+    "depot_candidates": 80,
+    "refinery_candidates": 8,
+    "supply_t_per_year": 6800000.0,
+    "demand_t_per_year": 1380000,
+    "maximum_saf_from_supply_t_per_year": 1360000.0,
+    "required_source_biomass_t_per_year": 6900000.0,
+    "required_refinery_intake_t_per_year": 6900000.0,
+    "demand_exceeds_supply_limit": true,
+    "baseline_depot_intake_capacity_t_per_year": 12000000,
+    "each_source_fits_small_depot": true,
+    "baseline_refinery_intake_capacity_t_per_year": 8696000,
+    "minimum_refineries_at_large_capacity": 7
+  },
+  "facility_coordinates": []
 }
